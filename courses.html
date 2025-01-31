@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our causes - SiseaCare</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* Initial state before sliding in */
+  .slide-in-left {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 0.8s ease-in-out;
+  }
+  
+  .slide-in-right {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 0.8s ease-in-out;
+  }
+  
+  /* Active state when in view */
+  .slide-in-active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  </style>
+  
+
+
+
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Header -->
+   
+  <header class="bg-blue-600 text-white py-6">
+
+    <nav class="flex items-center justify-between px-6">
+   
+  
+      <!-- Hamburger Icon -->
+      <button
+        id="menu-toggle"
+        class="sm:hidden text-white text-2xl focus:outline-none"
+      >
+        &#9776;
+      </button>
+  
+      <!-- Navigation Links -->
+      <ul
+        id="menu"
+        class="hidden flex-col sm:flex sm:flex-row sm:items-center sm:space-x-4 uppercase text-xs sm:text-sm bg-blue-500 sm:bg-transparent sm:static fixed inset-0 sm:inset-auto px-6 sm:px-0 py-6 sm:py-0 space-y-6 sm:space-y-0 z-50"
+      >
+        <!-- Close Button -->
+        <button
+          id="menu-close"
+          class="absolute top-4 right-6 text-white text-2xl sm:hidden"
+        >
+          &times;
+        </button>
+  
+        <li>
+          <a
+            href="./index.html"
+            class="hover:bg-white hover:text-blue-600 bg-orange-400 rounded px-3 py-1 transition"
+          >
+            Home
+          </a>
+        </li>
+        <li>
+          <a
+            href="./whatwedo.html"
+            class="hover:bg-white hover:text-blue-600 bg-orange-400 rounded px-3 py-1 transition"
+          >
+            What We Do
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="hover:bg-white hover:text-blue-600 bg-orange-400 rounded px-3 py-1 transition"
+          >
+            Contact
+          </a>
+        </li>
+      </ul>
+  
+      <!-- Social Media Icons -->
+      <div class="hidden sm:flex space-x-4">
+        <a
+          href="https://www.facebook.com/share/184zfjj9mw/?mibextid=LQQJ4d"
+          target="_blank"
+          class="text-xl hover:text-blue-300 transition"
+        >
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a
+          href="https://instagram.com/__cyrilphotos?igshid=NTc4MTIwNjQ2YQ==https://instagram.com/your-page"
+          target="_blank"
+          class="text-xl hover:text-pink-300 transition"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a
+          href="https://wa.me/+233543591986"
+          target="_blank"
+          class="text-xl hover:text-green-300 transition"
+        >
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+    </nav>
+  
+  
+    <!-- Hero Section -->
+    <div class="container mx-auto text-center mt-6 fade-in">
+      <h1 class="text-4xl font-extrabold">Our Causes</h1>
+      <p class="mt-3 text-lg font-light">Explore a variety of educational programs designed to empower and inspire</p>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-4 py-10 ">
+    <!-- Introduction -->
+    <div class="text-center mb-10">
+      <h2 class="text-2xl font-bold text-blue-600">Vision</h2>
+      <p class="mt-4 text-gray-700">
+        Striving for a world where every child, regardless of socio-economic background, has access to quality education and opportunities for growth.
+      </p>
+    </div>
+
+    <!-- Course Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Course 1 -->
+      <div class="bg-white shadow-md rounded-lg overflow-hidden slide-in-left">
+        <img src="./Components/OurCauses/skills.jpg" alt="Literacy Program" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="text-xl font-bold text-blue-600">Educational Support</h3>
+          <p class="mt-2 text-gray-600">
+            Distributing textbooks, stationery, and digital resources to underprivileged schools to bridge the education gap.
+          </p>
+          <a href="" class="block mt-4 text-orange-500 font-semibold hover:underline">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Course 2 -->
+      <div class="bg-white shadow-md rounded-lg overflow-hidden">
+        <img src="./Components/OurCauses/child skill.jpg" alt="Teacher Training" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="text-xl font-bold text-blue-600"> Developing Student Skills</h3>
+          <p class="mt-2 text-gray-600">
+           Supporting iteracy, numeracy, and essential skills development among students.
+          </p>
+          <a href="" class="block mt-4 text-orange-500 font-semibold hover:underline">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Course 3 -->
+      <div class="bg-white shadow-md rounded-lg overflow-hidden slide-in-right">
+        <img src="./Components/OurCauses/community2.jpg" alt="Digital Skills" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="text-xl font-bold text-blue-600">Promoting Community Engagement</h3>
+          <p class="mt-2 text-gray-600">
+            Encouraging parental involvement and fostering active participation in education.
+          </p>
+          <a href="" class="block mt-4 text-orange-500 font-semibold hover:underline">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Course 4 -->
+      <div class="bg-white shadow-md rounded-lg overflow-hidden slide-in-left">
+        <img src="./Components/OurCauses/corevalue.jpg" alt="STEM Education" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="text-xl font-bold text-blue-600">Core Values in Action</h3>
+          <p class="mt-2 text-gray-600">
+          Promoting equality, empowerment, compassion, collaboration, and transparency in all initiatives.
+          </p>
+          <a href="" class="block mt-4 text-orange-500 font-semibold hover:underline">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Course 5 -->
+      <div class="bg-white shadow-md rounded-lg overflow-hidden slide-in-right">
+        <img src="./Components/OurCauses/teacheremp.jpg" alt="Vocational Training" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="text-xl font-bold text-blue-600">Teacher Empowerment</h3>
+          <p class="mt-2 text-gray-600">
+          Conducting training and workshops to enhance the skills and capacity of educators.
+          </p>
+          <a href="" class="block mt-4 text-orange-500 font-semibold hover:underline">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Course 6 -->
+      <div class="bg-white shadow-md rounded-lg overflow-hidden slide-in-right">
+        <img src="./Components/whatwedo/onegirl.jpg" alt="Girls Empowerment" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="text-xl font-bold text-blue-600">Girls’ Empowerment</h3>
+          <p class="mt-2 text-gray-600">
+            Support girls in education through mentorship, scholarships, and awareness campaigns.
+          </p>
+          <a href="" class="block mt-4 text-orange-500 font-semibold hover:underline">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-4">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2025 EduCare. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const menuClose = document.getElementById("menu-close");
+    const menu = document.getElementById("menu");
+  
+    // Show menu
+    menuToggle.addEventListener("click", () => {
+      menu.classList.remove("hidden");
+    });
+  
+    // Hide menu
+    menuClose.addEventListener("click", () => {
+      menu.classList.add("hidden");
+    });
+  </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const slideInElements = document.querySelectorAll('.slide-in-left, .slide-in-right');
+  
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('slide-in-active');
+        } else {
+          entry.target.classList.remove('slide-in-active'); // Remove when scrolling out
+        }
+      });
+    }, { threshold: 0.2 });
+  
+    slideInElements.forEach(el => observer.observe(el));
+  });
+  
+  </script>
+
+</body>
+</html>
