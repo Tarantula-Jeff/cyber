@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Security Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="p-5 flex justify-between items-center bg-white shadow-md">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Logo" class="h-10">
+        <nav class="space-x-8 text-lg font-semibold">
+            <a href="#features" class="hover:text-green-700">Features</a>
+            <a href="#pricing" class="hover:text-green-700">Pricing</a>
+            <a href="#contact" class="hover:text-green-700">Contact</a>
+        </nav>
+        <button class="px-4 py-2 bg-green-500 text-white rounded-full shadow-md hover:bg-green-700 transition">Get Started</button>
+    </header>
+
+<!-- Hero Section -->
+<section class="relative w-full h-screen flex items-center justify-center text-white">
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-96 object-cover">
+        <source src="./cybervid.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Content Overlay (Positioned Higher) -->
+    <div class="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/4 z-10 text-center max-w-2xl px-6">
+        <h1 class="text-5xl font-extrabold leading-tight">
+            Send Personalized <span class="text-green-400">WhatsApp</span> Campaigns
+        </h1>       
+    </div>
+</section>
+
+
+
+<div class="max-w-5xl mx-auto py-10">
+    <h2 class="text-4xl font-bold text-center mb-6">Our Services</h2>
+
+    <!-- Swiper Container -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <!-- Service 1 -->
+            <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
+                <img src="https://via.placeholder.com/150" alt="Penetration Testing" class="mx-auto w-40 h-40 rounded-full object-cover">
+                <h3 class="text-xl font-bold mt-4">Penetration Testing</h3>
+                <p class="text-gray-500">Identify vulnerabilities in your system before attackers do.</p>
+            </div>
+            <!-- Service 2 -->
+            <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
+                <img src="./yaa (5).JPG" alt="Network Security" class="mx-auto w-full h-full rounded object-cover">
+                <h3 class="text-xl font-bold mt-4">Network Security</h3>
+                <p class="text-gray-500">Protect your networks from unauthorized access and attacks.</p>
+            </div>
+            <!-- Service 3 -->
+            <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
+                <img src="https://via.placeholder.com/150" alt="Incident Response" class="mx-auto w-40 h-40 rounded-full object-cover">
+                <h3 class="text-xl font-bold mt-4">Incident Response</h3>
+                <p class="text-gray-500">Quickly respond to security breaches and cyber threats.</p>
+            </div>
+            <!-- Service 4 -->
+            <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
+                <img src="https://via.placeholder.com/150" alt="Data Encryption" class="mx-auto w-40 h-40 rounded-full object-cover">
+                <h3 class="text-xl font-bold mt-4">Data Encryption</h3>
+                <p class="text-gray-500">Secure sensitive data with advanced encryption techniques.</p>
+            </div>
+            <!-- Service 5 -->
+            <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
+                <img src="https://via.placeholder.com/150" alt="Security Audits" class="mx-auto w-40 h-40 rounded-full object-cover">
+                <h3 class="text-xl font-bold mt-4">Security Audits</h3>
+                <p class="text-gray-500">Assess and improve your organization's security posture.</p>
+            </div>
+            <!-- Service 6 -->
+            <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
+                <img src="https://via.placeholder.com/150" alt="Cloud Security" class="mx-auto w-40 h-40 rounded-full object-cover">
+                <h3 class="text-xl font-bold mt-4">Cloud Security</h3>
+                <p class="text-gray-500">Protect cloud environments from cyber threats and breaches.</p>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="flex justify-between items-center mt-6">
+            <button class="swiper-button-prev text-gray-700">&larr;</button>
+            <button class="swiper-button-next text-gray-700">&rarr;</button>
+        </div>
+    </div>
+</div>
+
+
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script>
+      var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 3,
+          spaceBetween: 30,
+          navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+          },
+      });
+  </script>  
+</body>
+</html>
+
+
+

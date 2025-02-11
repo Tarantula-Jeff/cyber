@@ -6,6 +6,210 @@
     <title>Cyber Security Solutions</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+    <style>
+
+        /* Initial state: Slide in from the bottom */
+    .slide-in-bottom {
+      opacity: 0;
+      transform: translateY(100px);
+      transition: all 0.8s ease-in-out;
+    }
+    
+    /* Active state: Slides into place */
+    .slide-in-active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+      </style>
+      
+      <style>
+        /* Initial state before sliding in */
+      .slide-in-left {
+        opacity: 0;
+        transform: translateX(-100px);
+        transition: all 0.8s ease-in-out;
+      }
+      
+      .slide-in-right {
+        opacity: 0;
+        transform: translateX(100px);
+        transition: all 0.8s ease-in-out;
+      }
+      
+      /* Active state when in view */
+      .slide-in-active {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      </style>
+    
+      <style>
+        /* Slider Container */
+        .slider {
+          position: relative;
+          width: 100%;
+          max-width: 1000px;
+          height: 400px;
+          margin: auto;
+          overflow: hidden;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    
+        /* Slider Images */
+        .slides img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: none;
+        }
+    
+        /* Show first image by default */
+        .slides img.active {
+          display: block;
+        }
+      </style>
+     
+     <style>
+        .underline-custom {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 5px; /* Adjust padding to position underline */
+        }
+        
+        .underline-custom::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 4px; /* Adjust underline thickness */
+            background: linear-gradient(to right, #FFD700, #FF8C00); /* Gradient colors */
+            border-radius: 2px; /* Smooth edges */
+            transform: scaleX(0); /* Start with no underline */
+            transform-origin: right;
+            transition: transform 0.4s ease;
+        }
+        
+        .underline-custom:hover::after {
+            transform: scaleX(1); /* Full underline on hover */
+            transform-origin: left;
+        }
+        </style>
+        
+    
+      <style>
+        /* Your in-page CSS */
+        .playwrite-au-vic-guides-regular {
+            font-family: "Playwrite AU VIC Guides", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
+    
+    <style>
+    .unlock-regular {
+    font-family: "Unlock", serif;
+    font-weight: 400;
+    font-style: normal;
+    }
+    </style>
+    
+      <style>
+        /* Slide In */
+        .slide-in {
+            animation: slideIn 1.5s ease-out forwards;
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    
+        /* Slide Out */
+        .slide-out {
+            animation: slideOut 1.5s ease-in forwards;
+        }
+        @keyframes slideOut {
+            from {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+        }
+    </style>
+    
+          
+      <style>
+    
+          /* Animations */
+          .fade-in {
+              animation: fadeIn 2s ease-in-out;
+          }
+          @keyframes fadeIn {
+              from {
+                  opacity: 0;
+              }
+              to {
+                  opacity: 1;
+              }
+          }
+    
+          .slide-in {
+              animation: slideIn 1.5s ease-out;
+          }
+          @keyframes slideIn {
+              from {
+                  transform: translateY(-50px);
+                  opacity: 0;
+              }
+              to {
+                  transform: translateY(0);
+                  opacity: 1;
+              }
+          }
+    
+          .pulse {
+              animation: pulse 2s infinite;
+          }
+          @keyframes pulse {
+              0%, 100% {
+                  transform: scale(1);
+              }
+              50% {
+                  transform: scale(1.1);
+              }
+          }
+      </style>
+    
+    <style>
+      /* Custom styles for carousel navigation */
+      .carousel-button {
+        background-color: rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(10px);
+      }
+      .carousel-button:hover {
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+    </style>
+    
+    
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+    defer
+    ></script>
+    
     <style>
         /* Animations */
         .fade-in {
@@ -43,7 +247,7 @@
         </div>
         <nav class="flex items-center space-x-6">
             <a href="#services" class="hover:text-gray-400">Services</a>
-            <a href="#features" class="hover:text-gray-400">Features</a>
+            <a href="#features" class="hover:text-gray-400">Training Courses</a>
             <a href="#contact" class="hover:text-gray-400">Contact</a>
             <a href="#testimonials" class="hover:text-gray-400">Testimonials</a>
         </nav>
@@ -60,29 +264,194 @@
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-20 bg-gray-800">
-        <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-8">Our Cyber Security Services</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="service-card bg-gray-700 p-6 rounded-lg hover:scale-105 transition-transform duration-300">
-                    <i class="fas fa-shield-alt text-4xl mb-4"></i>
-                    <h3 class="text-xl font-semibold mb-4">Threat Detection</h3>
-                    <p>Our advanced algorithms and monitoring tools detect potential threats in real-time.</p>
+    <section class="py-20">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
+            <!-- Service Card -->
+            <div class="bg-black border-4 border-white p-6 rounded-2xl text-center shadow-lg">
+                <div class="w-16 h-16 mx-auto mb-4">
+                    <img src="your-icon-url" alt="Access Control">
                 </div>
-                <div class="service-card bg-gray-700 p-6 rounded-lg hover:scale-105 transition-transform duration-300">
-                    <i class="fas fa-lock text-4xl mb-4"></i>
-                    <h3 class="text-xl font-semibold mb-4">Data Encryption</h3>
-                    <p>We provide robust encryption to secure your sensitive data from unauthorized access.</p>
+                <h3 class="text-xl font-bold">Access Control</h3>
+                <p class="mt-2 text-gray-400">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <button class="mt-4 text-gray-500">LEARN MORE</button>
+            </div>
+            
+            <div class="bg-black border-4 border-white p-6 rounded-2xl text-center shadow-lg">
+                <div class="w-16 h-16 mx-auto mb-4">
+                    <img src="your-icon-url" alt="Security">
                 </div>
-                <div class="service-card bg-gray-700 p-6 rounded-lg hover:scale-105 transition-transform duration-300">
-                    <i class="fas fa-user-secret text-4xl mb-4"></i>
-                    <h3 class="text-xl font-semibold mb-4">Identity Protection</h3>
-                    <p>Protect your personal and business identities from cyber threats with our specialized solutions.</p>
+                <h3 class="text-xl font-bold">Security</h3>
+                <p class="mt-2 text-gray-400">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <button class="mt-4 text-gray-500">LEARN MORE</button>
+            </div>
+
+            <div class="bg-black border-4 border-white p-6 rounded-2xl text-center shadow-lg">
+                <div class="w-16 h-16 mx-auto mb-4">
+                    <img src="your-icon-url" alt="IT Services">
                 </div>
+                <h3 class="text-xl font-bold">IT Services</h3>
+                <p class="mt-2 text-gray-400">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <button class="mt-4 text-gray-500">LEARN MORE</button>
+            </div>
+
+            <div class="bg-black border-4 border-white p-6 rounded-2xl text-center shadow-lg">
+                <div class="w-16 h-16 mx-auto mb-4">
+                    <img src="your-icon-url" alt="Doorbell Camera">
+                </div>
+                <h3 class="text-xl font-bold">Doorbell Camera</h3>
+                <p class="mt-2 text-gray-400">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <button class="mt-4 text-gray-500">LEARN MORE</button>
             </div>
         </div>
     </section>
+
+<!-- Services Section --> 
+<section id="services" class="py-20 bg-gray-800">
+    <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-8">Our Cyber Security Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="service-card bg-gray-700 p-6 rounded-lg hover:scale-105 transition-transform duration-300">
+                <div class="w-full h-40 bg-gray-600 mb-4 flex items-center justify-center text-white">Image Placeholder</div>
+                <i class="fas fa-shield-alt text-4xl mb-4"></i>
+                <h3 class="text-xl font-semibold mb-4">Threat Detection</h3>
+                <p>Our advanced algorithms and monitoring tools detect potential threats in real-time.</p>
+            </div>
+            <div class="service-card bg-gray-700 p-6 rounded-lg hover:scale-105 transition-transform duration-300">
+                <div class="w-full h-40 bg-gray-600 mb-4 flex items-center justify-center text-white">Image Placeholder</div>
+                <i class="fas fa-lock text-4xl mb-4"></i>
+                <h3 class="text-xl font-semibold mb-4">Data Encryption</h3>
+                <p>We provide robust encryption to secure your sensitive data from unauthorized access.</p>
+            </div>
+            
+            <div class="service-card bg-gray-700 p-6 rounded-lg hover:scale-105 transition-transform duration-300">
+                <div class="w-full h-40 bg-gray-600 mb-4 flex items-center justify-center text-white">Image Placeholder</div>
+                <i class="fas fa-user-secret text-4xl mb-4"></i>
+                <h3 class="text-xl font-semibold mb-4">Identity Protection</h3>
+                <p>Protect your personal and business identities from cyber threats with our specialized solutions.</p>
+            </div>
+        </div>
+        <div class="mt-8">
+            <button class="bg-gray-600 text-white py-2 px-6 rounded-lg hover:bg-gray-700 transition">View All Services</button>
+        </div>
+    </div>
+</section>
+
+<!-- Parallax Section -->
+<section class="relative h-screen bg-fixed bg-cover bg-center" style="background-image: url('./yaa\ \(5\).JPG');">
+    <div class="h-full flex items-center justify-center bg-black bg-opacity-50">
+        <h2 class="text-white text-4xl font-bold">Welcome to Our Secure Platform</h2>
+    </div>
+</section>
+
+
+<!-- Services Section --> 
+<section id="services" class="py-20 bg-gray-800">
+    <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-8">Our Cyber Security Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="service-card bg-gray-700 p-6 rounded-lg hover:scale-105 transition-transform duration-300">
+                <div class="w-full h-40 bg-gray-600 mb-4 flex items-center justify-center text-white">Image Placeholder</div>
+                <i class="fas fa-shield-alt text-4xl mb-4"></i>
+                <h3 class="text-xl font-semibold mb-4">Threat Detection</h3>
+                <p>Our advanced algorithms and monitoring tools detect potential threats in real-time.</p>
+            </div>
+            <div class="service-card bg-gray-700 p-6 rounded-lg hover:scale-105 transition-transform duration-300">
+                <div class="w-full h-40 bg-gray-600 mb-4 flex items-center justify-center text-white">Image Placeholder</div>
+                <i class="fas fa-lock text-4xl mb-4"></i>
+                <h3 class="text-xl font-semibold mb-4">Data Encryption</h3>
+                <p>We provide robust encryption to secure your sensitive data from unauthorized access.</p>
+            </div>
+            
+            <div class="service-card bg-gray-700 p-6 rounded-lg hover:scale-105 transition-transform duration-300">
+                <div class="w-full h-40 bg-gray-600 mb-4 flex items-center justify-center text-white">Image Placeholder</div>
+                <i class="fas fa-user-secret text-4xl mb-4"></i>
+                <p>Protect your personal and business identities from cyber threats with our specialized solutions.</p>
+            </div>
+        </div>
+        <div class="mt-8">
+            <button class="bg-gray-600 text-white py-2 px-6 rounded-lg hover:bg-gray-700 transition">View All Services</button>
+        </div>
+    </div>
+</section>
+
+<section>  <!-- Section 1 -->
+    <div class="flex flex-col md:flex-row items-center gap-8 py-8">
+      <!-- Text Content -->
+      <div class="md:w-1/2 slide-in">
+        <h2 class="text-2xl font-bold text-blue-600">Bridging the Resource Gap</h2>
+        <p class="mt-4 text-gray-700 leading-relaxed">
+          We provide essential educational materials, including textbooks, stationery, and digital tools, to underprivileged schools. By ensuring access to resources, we empower students to achieve their full potential and create a foundation for lifelong learning.
+          To improve education in underprivileged schools, it's crucial to provide essential resources. This includes high-quality textbooks for all subjects, basic stationery like notebooks and pens, and access to technology like computers and the internet. These resources empower students with the knowledge and skills they need to succeed.
+        </p>
+      </div>
+      <!-- Image -->
+      <div class="md:w-1/2">
+        <img src="./Components/whatwedo/schoolpencil.jpg" alt="Educational Materials" class="rounded-lg shadow-lg slide-in-left">
+      </div>      
+    </div></section>
+
+
+    <!-- Services Section --> 
+<section id="services" class="py-20 bg-gray-800">
+    <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-8">Our IT Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="service-card bg-gray-700 p-6 rounded-lg hover:scale-105 transition-transform duration-300">
+                <div class="w-full h-40 bg-gray-600 mb-4 flex items-center justify-center text-white">Image Placeholder</div>
+                <i class="fas fa-shield-alt text-4xl mb-4"></i>
+                <h3 class="text-xl font-semibold mb-4">Threat Detection</h3>
+                <p>Our advanced algorithms and monitoring tools detect potential threats in real-time.</p>
+            </div>
+            <div class="service-card bg-gray-700 p-6 rounded-lg hover:scale-105 transition-transform duration-300">
+                <div class="w-full h-40 bg-gray-600 mb-4 flex items-center justify-center text-white">Image Placeholder</div>
+                <i class="fas fa-lock text-4xl mb-4"></i>
+                <h3 class="text-xl font-semibold mb-4">Data Encryption</h3>
+                <p>We provide robust encryption to secure your sensitive data from unauthorized access.</p>
+            </div>
+            
+            <div class="service-card bg-gray-700 p-6 rounded-lg hover:scale-105 transition-transform duration-300">
+                <div class="w-full h-40 bg-gray-600 mb-4 flex items-center justify-center text-white">Image Placeholder</div>
+                <i class="fas fa-user-secret text-4xl mb-4"></i>
+                <h3 class="text-xl font-semibold mb-4">Identity Protection</h3>
+                <p>Protect your personal and business identities from cyber threats with our specialized solutions.</p>
+            </div>
+        </div>
+        <div class="mt-8">
+            <button class="bg-gray-600 text-white py-2 px-6 rounded-lg hover:bg-gray-700 transition">View All Services</button>
+        </div>
+    </div>
+</section>
+
+
+<section>
+    <section 
+    class="bg-gray-900 shadow-md rounded-lg p-6 flex items-center justify-start"
+>
+    <div class="md:w-1/3 w-full">
+        <video 
+            autoplay muted loop playsinline 
+            class="w-2/3 max-w-xs h-auto rounded-md shadow-lg"
+        >
+            <source src="./Untitled video - Made with Clipchamp.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</section>
+
+
+<section 
+    class="bg-gray-900 shadow-md rounded-lg p-6 slide-in flex items-center justify-center" 
+    style="min-height: 100vh; display: flex; align-items: center; justify-content:flex-end;"
+>
+    <div class="md:w-1/2">
+        <video autoplay muted loop playsinline class="w-full rounded-md shadow-lg">
+            <source src="./vecteezy_businessman-show-crm-customer-relationship-management-for_36142838.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</section>
+</section>
+
 
     <!-- Features Section -->
     <section id="features" class="py-20 bg-gray-900">
@@ -105,6 +474,7 @@
         </div>
     </section>
 
+
     <!-- Testimonials Section -->
     <section id="testimonials" class="py-20 bg-gray-800">
         <div class="container mx-auto text-center">
@@ -126,6 +496,15 @@
         </div>
     </section>
 
+    <div class="slider">
+        <div class="slides">
+          <img src="./Components/pictures/siseafam.JPG" class="active" alt="Slide 1">
+          <img src="./Components/pictures/logologo.JPG" alt="Slide 2">
+          <img src="./Components/pictures/crowd.JPG" alt="Slide 3">
+          <img src="./Components/pictures/sompik.JPG" alt="Slide 4">
+        </div>
+      </div>
+
     <!-- Contact Section -->
     <section id="contact" class="py-20 bg-gray-900">
         <div class="container mx-auto text-center">
@@ -143,5 +522,20 @@
     <footer class="bg-gray-800 text-gray-400 text-sm text-center py-6">
         <p>© 2035 Cyber Security Solutions. All rights reserved.</p>
     </footer>
+
+    <!--slides script-->
+<script>
+    const slides = document.querySelectorAll(".slides img");
+    let currentIndex = 0;
+  
+    function showNextSlide() {
+      slides[currentIndex].classList.remove("active");
+      currentIndex = (currentIndex + 1) % slides.length;
+      slides[currentIndex].classList.add("active");
+    }
+  
+    // Change image every 2 seconds (2000ms)
+    setInterval(showNextSlide, 5000);
+  </script>
 </body>
 </html>

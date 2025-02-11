@@ -1,0 +1,29 @@
+Cybersecurity services
+----------------------
+
+1. Penetration Testing
+2. Vulnerability Asessment
+3. Ethical Hacking
+4. Digital Forensics 
+5. Incidence Response
+6. Network security
+7. Information Security 
+8. Industrial Control system(ICS) & IOT
+9. Blue Teaming (Defensive Security)
+10.Red Teaming (Offensive Security)
+11.Threat Hunting/Intelligence
+
+
+
+
+IT Service
+----------
+
+1. Enterprise IP Networking
+2. Data Center infrastructure
+3. Structured Cabling management system
+4. VSAT and Satellite Services
+5. Internet Connectivity (Cable/satellite/fiber)
+6. Web/application development 
+
+
