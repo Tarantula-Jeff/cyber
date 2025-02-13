@@ -6,14 +6,287 @@
     <title>Cyber Security Solutions</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+
+    <style>
+/* Roll-in Animation */
+/* Initial hidden state */
+.roll-in {
+    opacity: 0;
+    transform: translateX(100%) rotate(360deg);
+    transition: transform 2s ease-out, opacity 2s ease-out;
+}
+
+/* When in view, apply animation */
+.roll-in.active {
+    opacity: 1;
+    transform: translateX(0) rotate(0);
+}
+    </style>
+
+
+    <style>
+        @keyframes roll {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        
+        .animate-roll {
+            width: 200%;
+            display: flex;
+            animation: roll 10s linear infinite;
+        }
+        </style>
+
+    <style>
+
+        /* Initial state: Slide in from the bottom */
+    .slide-in-bottom {
+      opacity: 0;
+      transform: translateY(100px);
+      transition: all 0.8s ease-in-out;
+    }
+    
+    /* Active state: Slides into place */
+    .slide-in-active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+      </style>
+
+
+
+<!--something-->
+
+<style>
+    /* Initial state before sliding in */
+  .slowerslide-in-left {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 2s ease-in-out;
+  }
+  
+  .slowerslide-in-right {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 2s ease-in-out;
+  }
+  
+  /* Active state when in view */
+  .slowerslide-in-active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  </style>
+<!--something-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+      <style>
+        /* Initial state before sliding in */
+      .slide-in-left {
+        opacity: 0;
+        transform: translateX(-100px);
+        transition: all 0.8s ease-in-out;
+      }
+      
+      .slide-in-right {
+        opacity: 0;
+        transform: translateX(100px);
+        transition: all 0.8s ease-in-out;
+      }
+      
+      /* Active state when in view */
+      .slide-in-active {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      </style>
+    
+      <style>
+        /* Slider Container */
+        .slider {
+          position: relative;
+          width: 100%;
+          max-width: 1000px;
+          height: 400px;
+          margin: auto;
+          overflow: hidden;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    
+        /* Slider Images */
+        .slides img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: none;
+        }
+    
+        /* Show first image by default */
+        .slides img.active {
+          display: block;
+        }
+      </style>
+     
+     <style>
+        .underline-custom {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 5px; /* Adjust padding to position underline */
+        }
+        
+        .underline-custom::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 4px; /* Adjust underline thickness */
+            background: linear-gradient(to right, #FFD700, #FF8C00); /* Gradient colors */
+            border-radius: 2px; /* Smooth edges */
+            transform: scaleX(0); /* Start with no underline */
+            transform-origin: right;
+            transition: transform 0.4s ease;
+        }
+        
+        .underline-custom:hover::after {
+            transform: scaleX(1); /* Full underline on hover */
+            transform-origin: left;
+        }
+        </style>
+        
+    
+      <style>
+        /* Your in-page CSS */
+        .playwrite-au-vic-guides-regular {
+            font-family: "Playwrite AU VIC Guides", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
+    
+    <style>
+    .unlock-regular {
+    font-family: "Unlock", serif;
+    font-weight: 400;
+    font-style: normal;
+    }
+    </style>
+    
+      <style>
+        /* Slide In */
+        .slide-in {
+            animation: slideIn 1.5s ease-out forwards;
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    
+        /* Slide Out */
+        .slide-out {
+            animation: slideOut 1.5s ease-in forwards;
+        }
+        @keyframes slideOut {
+            from {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+        }
+    </style>
+    
+          
+      <style>
+    
+          /* Animations */
+          .fade-in {
+              animation: fadeIn 2s ease-in-out;
+          }
+          @keyframes fadeIn {
+              from {
+                  opacity: 0;
+              }
+              to {
+                  opacity: 1;
+              }
+          }
+    
+          .slide-in {
+              animation: slideIn 1.5s ease-out;
+          }
+          @keyframes slideIn {
+              from {
+                  transform: translateY(-50px);
+                  opacity: 0;
+              }
+              to {
+                  transform: translateY(0);
+                  opacity: 1;
+              }
+          }
+    
+          .pulse {
+              animation: pulse 2s infinite;
+          }
+          @keyframes pulse {
+              0%, 100% {
+                  transform: scale(1);
+              }
+              50% {
+                  transform: scale(1.1);
+              }
+          }
+      </style>
+    
+    <style>
+      /* Custom styles for carousel navigation */
+      .carousel-button {
+        background-color: rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(10px);
+      }
+      .carousel-button:hover {
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+    </style>
+    
+    
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+    defer
+    ></script>
 </head>
-<body>
-    <!-- Navbar -->
-    <header class="p-5 flex justify-between items-center bg-white shadow-md">
+<body class="bg-gray-900">
+    <!-- navbar -->
+    <header class="p-5 flex justify-between items-center shadow-md bg-gray-900 slide-in">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Logo" class="h-10">
-        <nav class="space-x-8 text-lg font-semibold">
+        <nav class="space-x-8 text-lg text-white font-semibold">
             <a href="#features" class="hover:text-green-700">Features</a>
             <a href="#pricing" class="hover:text-green-700">Pricing</a>
             <a href="#contact" class="hover:text-green-700">Contact</a>
@@ -22,7 +295,7 @@
     </header>
 
 <!-- Hero Section -->
-<section class="relative w-full h-screen flex items-center justify-center text-white">
+<section class="relative w-full h-screen flex items-center justify-center text-white slide-in">
     <!-- Background Video -->
     <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-96 object-cover">
         <source src="./cybervid.mp4" type="video/mp4">
@@ -32,104 +305,725 @@
     <!-- Content Overlay (Positioned Higher) -->
     <div class="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/4 z-10 text-center max-w-2xl px-6">
         <h1 class="text-5xl font-extrabold leading-tight">
-            Send Personalized <span class="text-green-400">WhatsApp</span> Campaigns
+             Services
         </h1>       
     </div>
 </section>
 
+<section class="w-full h-screen flex items-center justify-center p-6 bg-white">
+    <div class="max-w-6xl w-full h-full bg-white shadow-lg rounded-lg p-8 flex flex-col md:flex-row gap-8">
+        
+        <!-- Left Side: Text & List -->
+        <div class="w-full md:w-1/2 flex flex-col justify-center">
+            <h2 class="text-4xl font-bold mb-6 slowerslide-in-left">About King's Rental And Guardian</h2>
+            <ul class="space-y-4 text-lg text-gray-700">
+                <li class="flex items-center slide-in-left">
+                    <i class="fa-regular fa-circle-check"></i>
+                    A fleet of premium, well-maintained vehicles
+                </li>
+                <li class="flex items-center slowerslide-in-left">
+                    <i class="fas fa-check-circle text-green-500 mr-3 "></i>
+                    Luxury and reliable rides for business or personal needs
+                </li>
+                <li class="flex items-center slide-in-left">
+                    <i class="fas fa-shield-alt text-blue-500 mr-3"></i>
+                    Investigatory Services
+                </li>
+                <li class="flex items-center slowerslide-in-left">
+                    <i class="fas fa-user-shield text-blue-500 mr-3"></i>
+                    Trained and professional security personnel
+                </li>
+                <li class="flex items-center slide-in-left">
+                    <i class="fas fa-user-secret text-gray-600 mr-3"></i>
+                    Discreet and highly skilled protection specialists
+                </li>
+                <li class="flex items-center slowerslide-in-left">
+                    <i class="fas fa-lock text-red-500 mr-3"></i>
+                    24/7 security for VIPs, executives, and special events
+                </li>
+            </ul>
+        </div>
 
+       <!-- Right Video -->
+       <div class="relative w-full md:w-1/2 roll-in">
+        <video class="w-full h-full object-cover rounded-lg" autoplay loop muted>
+            <source src="./cybervid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Services Slider</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
-</head>
-<body class="bg-gray-100">
+    </div>
+</section>
 
-    <div class="max-w-6xl mx-auto py-10 px-4">
-        <h2 class="text-4xl font-bold text-center mb-6">Our Services</h2>
+<div class="max-w-full max-h-full  mx-auto py-1 mt-48 bg-gray-900 px-4 ">
+    <h2 class="text-4xl font-bold text-center text-white mb-6">Our Services</h2>
 
-        <!-- Swiper Container -->
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <!-- Service 1 -->
-                <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
-                    <img src="https://via.placeholder.com/150" alt="Penetration Testing" class="mx-auto w-40 h-40 rounded-full object-cover">
-                    <h3 class="text-xl font-bold mt-4">Penetration Testing</h3>
-                    <p class="text-gray-500">Identify vulnerabilities in your system before attackers do.</p>
-                </div>
-                <!-- Service 2 -->
-                <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
-                    <img src="./yaa (5).JPG" alt="Network Security" class="mx-auto w-full h-40 rounded object-cover">
-                    <h3 class="text-xl font-bold mt-4">Network Security</h3>
-                    <p class="text-gray-500">Protect your networks from unauthorized access and attacks.</p>
-                </div>
-                <!-- Service 3 -->
-                <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
-                    <img src="https://via.placeholder.com/150" alt="Incident Response" class="mx-auto w-40 h-40 rounded-full object-cover">
-                    <h3 class="text-xl font-bold mt-4">Incident Response</h3>
-                    <p class="text-gray-500">Quickly respond to security breaches and cyber threats.</p>
-                </div>
-                <!-- Service 4 -->
-                <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
-                    <img src="https://via.placeholder.com/150" alt="Data Encryption" class="mx-auto w-40 h-40 rounded-full object-cover">
-                    <h3 class="text-xl font-bold mt-4">Data Encryption</h3>
-                    <p class="text-gray-500">Secure sensitive data with advanced encryption techniques.</p>
-                </div>
-                <!-- Service 5 -->
-                <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
-                    <img src="https://via.placeholder.com/150" alt="Security Audits" class="mx-auto w-40 h-40 rounded-full object-cover">
-                    <h3 class="text-xl font-bold mt-4">Security Audits</h3>
-                    <p class="text-gray-500">Assess and improve your organization's security posture.</p>
-                </div>
-                <!-- Service 6 -->
-                <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
-                    <img src="https://via.placeholder.com/150" alt="Cloud Security" class="mx-auto w-40 h-40 rounded-full object-cover">
-                    <h3 class="text-xl font-bold mt-4">Cloud Security</h3>
-                    <p class="text-gray-500">Protect cloud environments from cyber threats and breaches.</p>
-                </div>
+    <!-- Swiper Container -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <!-- Service Items -->
+            <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
+                <img src="https://via.placeholder.com/150" alt="Penetration Testing" class="mx-auto w-40 h-40 rounded-full object-cover">
+                <h3 class="text-xl font-bold mt-4">Penetration Testing</h3>
+                <p class="text-gray-500">Identify vulnerabilities in your system before attackers do.</p>
             </div>
+            <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
+                <img src="./yaa (5).JPG" alt="Network Security" class="mx-auto w-40 h-40 rounded-full object-cover">
+                <h3 class="text-xl font-bold mt-4">Network Security</h3>
+                <p class="text-gray-500">Protect your networks from unauthorized access and attacks.</p>
+            </div>
+            <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
+                <img src="https://via.placeholder.com/150" alt="Incident Response" class="mx-auto w-40 h-40 rounded-full object-cover">
+                <h3 class="text-xl font-bold mt-4">Incident Response</h3>
+                <p class="text-gray-500">Quickly respond to security breaches and cyber threats.</p>
+            </div>
+            <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
+                <img src="https://via.placeholder.com/150" alt="Data Encryption" class="mx-auto w-40 h-40 rounded-full object-cover">
+                <h3 class="text-xl font-bold mt-4">Data Encryption</h3>
+                <p class="text-gray-500">Secure sensitive data with advanced encryption techniques.</p>
+            </div>
+            <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
+                <img src="https://via.placeholder.com/150" alt="Security Audits" class="mx-auto w-40 h-40 rounded-full object-cover">
+                <h3 class="text-xl font-bold mt-4">Security Audits</h3>
+                <p class="text-gray-500">Assess and improve your organization's security posture.</p>
+            </div>
+            <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
+                <img src="https://via.placeholder.com/150" alt="Cloud Security" class="mx-auto w-40 h-40 rounded-full object-cover">
+                <h3 class="text-xl font-bold mt-4">Cloud Security</h3>
+                <p class="text-gray-500">Protect cloud environments from cyber threats and breaches.</p>
+            </div>
+        </div>
 
-            <!-- Navigation Buttons -->
-            <div class="flex justify-between items-center mt-6">
-                <button class="swiper-button-prev text-gray-700">&larr;</button>
-                <button class="swiper-button-next text-gray-700">&rarr;</button>
+        <!-- Navigation Buttons -->
+        <div class="flex justify-between items-center mt-6">
+            <button class="swiper-button-prev text-gray-700">&larr;</button>
+            <button class="swiper-button-next text-gray-700">&rarr;</button>
+        </div>
+    </div>
+</div>
+
+<div class="max-w-7xl mx-auto max-w-full max-h-full py-10 bg-gray-900 px-4">
+
+    <!-- Swiper Container -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <!-- Service Items -->
+            <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
+                <img src="https://via.placeholder.com/15" alt="Penetration Testing" class="mx-auto w-40 h-40 rounded-full object-cover">
+                <h3 class="text-xl font-bold mt-4">Penetration Testing</h3>
+                <p class="text-gray-500">Identify vulnerabilities in your system before attackers do.</p>
+            </div>
+            <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
+                <img src="./yaa (5).JPG" alt="Network Security" class="mx-auto w-40 h-40 rounded-full object-cover">
+                <h3 class="text-xl font-bold mt-4">Network Security</h3>
+                <p class="text-gray-500">Protect your networks from unauthorized access and attacks.</p>
+            </div>
+            <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
+                <img src="https://via.placeholder.com/150" alt="Incident Response" class="mx-auto w-40 h-40 rounded-full object-cover">
+                <h3 class="text-xl font-bold mt-4">Incident Response</h3>
+                <p class="text-gray-500">Quickly respond to security breaches and cyber threats.</p>
+            </div>
+            <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
+                <img src="https://via.placeholder.com/150" alt="Data Encryption" class="mx-auto w-40 h-40 rounded-full object-cover">
+                <h3 class="text-xl font-bold mt-4">Data Encryption</h3>
+                <p class="text-gray-500">Secure sensitive data with advanced encryption techniques.</p>
+            </div>
+            <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
+                <img src="https://via.placeholder.com/150" alt="Security Audits" class="mx-auto w-40 h-40 rounded-full object-cover">
+                <h3 class="text-xl font-bold mt-4">Security Audits</h3>
+                <p class="text-gray-500">Assess and improve your organization's security posture.</p>
+            </div>
+            <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
+                <img src="https://via.placeholder.com/150" alt="Cloud Security" class="mx-auto w-40 h-40 rounded-full object-cover">
+                <h3 class="text-xl font-bold mt-4">Cloud Security</h3>
+                <p class="text-gray-500">Protect cloud environments from cyber threats and breaches.</p>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="flex justify-between items-center mt-6">
+            <button class="swiper-button-prev text-gray-700">&larr;</button>
+            <button class="swiper-button-next text-gray-700">&rarr;</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="max-w-5xl mx-auto py-10 bg-gray-900 max-w-full max-h-full px-4">
+    <h2 class="text-4xl font-bold text-center text-white mb-6">IT<span>Services</span></h2>
+
+    <!-- Swiper Container -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <!-- Service Items -->
+            <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
+                <img src="https://via.placeholder.com/150" alt="Penetration Testing" class="mx-auto w-40 h-40 rounded-full object-cover">
+                <h3 class="text-xl font-bold mt-4">Penetration Testing</h3>
+                <p class="text-gray-500">Identify vulnerabilities in your system before attackers do.</p>
+            </div>
+            <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
+                <img src="./yaa (5).JPG" alt="Network Security" class="mx-auto w-40 h-40 rounded-full object-cover">
+                <h3 class="text-xl font-bold mt-4">Network Security</h3>
+                <p class="text-gray-500">Protect your networks from unauthorized access and attacks.</p>
+            </div>
+            <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
+                <img src="https://via.placeholder.com/150" alt="Incident Response" class="mx-auto w-40 h-40 rounded-full object-cover">
+                <h3 class="text-xl font-bold mt-4">Incident Response</h3>
+                <p class="text-gray-500">Quickly respond to security breaches and cyber threats.</p>
+            </div>
+            <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
+                <img src="https://via.placeholder.com/150" alt="Data Encryption" class="mx-auto w-40 h-40 rounded-full object-cover">
+                <h3 class="text-xl font-bold mt-4">Data Encryption</h3>
+                <p class="text-gray-500">Secure sensitive data with advanced encryption techniques.</p>
+            </div>
+            <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
+                <img src="https://via.placeholder.com/150" alt="Security Audits" class="mx-auto w-40 h-40 rounded-full object-cover">
+                <h3 class="text-xl font-bold mt-4">Security Audits</h3>
+                <p class="text-gray-500">Assess and improve your organization's security posture.</p>
+            </div>
+            <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
+                <img src="https://via.placeholder.com/150" alt="Cloud Security" class="mx-auto w-40 h-40 rounded-full object-cover">
+                <h3 class="text-xl font-bold mt-4">Cloud Security</h3>
+                <p class="text-gray-500">Protect cloud environments from cyber threats and breaches.</p>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="flex justify-between items-center mt-6">
+            <button class="swiper-button-prev text-gray-700">&larr;</button>
+            <button class="swiper-button-next text-gray-700">&rarr;</button>
+        </div>
+    </div>
+</div>
+
+<section class="mt-28">
+    <h2 class="text-4xl font-bold text-center text-white mb-6">Cybersecurity Services Explained</h2>
+</section>
+
+
+<!--Explanation Section-->
+<section class="mt-48">
+
+<!--Explanation x-->
+<section class="">
+<div class="w-full p-4">
+    <div class="relative w-full h-screen rounded-lg overflow-hidden">
+        <!-- Background Image -->
+        <img src="./yaa (5).JPG" alt="Huawei Phone" class="w-full h-full object-cover">
+
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+        <!-- Text Content -->
+        <div class="absolute inset-0 flex flex-col justify-center items-start px-10 text-white max-w-3xl">
+            <p class="uppercase text-sm tracking-wide font-semibold">Case Study</p>
+            <h2 class="text-4xl font-bold leading-tight mt-2">
+                Case Study: HUAWEI. Icon Design for EMUI 10
+            </h2>
+            <p class="mt-4 text-lg text-gray-300">
+                The article shows the creative process of icon design for HUAWEI EMUI 10: check the stages of icon creation from sketches and concepts to a polished icon system.
+            </p>
+        </div>
+    </div>
+</div>
+</section>
+
+<section class="p-4 mt-36">
+<div class="w-full rounded-lg bg-green-700 p-10">
+    <div class="flex flex-col md:flex-row w-full max-w-6xl mx-auto bg-green-800 text-white rounded-lg overflow-hidden">
+        <!-- Image Section -->
+        <div class="md:w-1/2 w-full">
+            <img src="./yaa (5).JPG" alt="Your Image" class="w-full h-full object-cover">
+        </div>
+
+        <!-- Text Content Section -->
+        <div class="md:w-1/2 w-full p-8 flex flex-col justify-center">
+            <h2 class="text-3xl font-bold mb-4">Built for the Thinkers</h2>
+            <p class="text-gray-300 text-lg">
+                Crafting leather takes time. It's not something most people ponder. I certainly didn't, a decade ago, when I first set foot in Mexico...
+            </p>
+        </div>
+    </div>
+</div>
+</section>
+
+<!--Explanation x-->
+<section class=" mt-36">
+    <div class="w-full p-4">
+    
+        <div class="relative w-full h-screen rounded-lg overflow-hidden">
+            <!-- Background Image -->
+            <img src="./yaa (5).JPG" alt="Huawei Phone" class="w-full h-full object-cover">
+    
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    
+            <!-- Text Content -->
+            <div class="absolute inset-0 flex flex-col justify-center items-start px-10 text-white max-w-3xl">
+                <p class="uppercase text-sm tracking-wide font-semibold">Case Study</p>
+                <h2 class="text-4xl font-bold leading-tight mt-2">
+                    Case Study: HUAWEI. Icon Design for EMUI 10
+                </h2>
+                <p class="mt-4 text-lg text-gray-300">
+                    The article shows the creative process of icon design for HUAWEI EMUI 10: check the stages of icon creation from sketches and concepts to a polished icon system.
+                </p>
             </div>
         </div>
     </div>
+    </section>
 
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 3,
-            spaceBetween: 30,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
+<!--Explanation x-->
+<section class="p-4 mt-36">
+    <div class="w-full bg-blue-700 py-10 rounded-lg">
+        <div class="flex flex-col md:flex-row w-full max-w-6xl mx-auto bg-blue-800 text-white rounded-lg overflow-hidden">
+            <!-- Image Section -->
+            <div class="md:w-1/2 w-full">
+                <img src="./yaa (5).JPG" alt="About Milk Bar" class="w-full h-full object-cover">
+            </div>
+
+            <!-- Text Content Section (Added Left Margin) -->
+            <div class="md:w-1/2 w-full p-8 md:pl-10 flex flex-col justify-center">
+                <h2 class="text-3xl font-bold mb-4">About Milk Bar</h2>
+                <p class="text-gray-300 text-lg">
+                    Milk Bar is a sweet (and occasionally savory) shop that has been turning familiar treats upside down...
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Explanation x-->
+<section class="mt-36">
+    <div class="w-full p-4">
+    
+       
+        <div class="relative w-full h-screen rounded-lg overflow-hidden">
+            <!-- Background Image -->
+            <img src="./yaa (5).JPG" alt="Huawei Phone" class="w-full h-full object-cover">
+    
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    
+            <!-- Text Content -->
+            <div class="absolute inset-0 flex flex-col justify-center items-start px-10 text-white max-w-3xl">
+                <p class="uppercase text-sm tracking-wide font-semibold">Case Study</p>
+                <h2 class="text-4xl font-bold leading-tight mt-2">
+                    Case Study: HUAWEI. Icon Design for EMUI 10
+                </h2>
+                <p class="mt-4 text-lg text-gray-300">
+                    The article shows the creative process of icon design for HUAWEI EMUI 10: check the stages of icon creation from sketches and concepts to a polished icon system.
+                </p>
+            </div>
+        </div>
+    </div>
+    </section>
+
+<!--Explanation x-->
+    <section class="w-full max-w-4xl mt-12 mx-auto">
+        <!-- Image Section -->
+        <div class="w-full h-full">f
+            <img src="./yaa (5).JPG" alt="Descriptive Alt Text" class="w-full h-full object-cover rounded-lg">
+        </div>
+    
+        <!-- Text/Notes Section -->
+        <div class="mt-6 text-center px-6">
+            <h2 class="text-3xl font-bold text-gray-900">Title or Heading</h2>
+            <p class="mt-3 text-lg text-gray-600">
+                This is where you can add your notes, description, or details about the image above.
+                Make sure the content is clear and informative.
+            </p>
+        </div>
+    </section>
+
+
+    <!--Explanation x-->
+<section class="mt-36">
+    <div class="w-full p-4">
+    
+       
+        <div class="relative w-full h-screen rounded-lg overflow-hidden">
+            <!-- Background Image -->
+            <img src="./yaa (5).JPG" alt="Huawei Phone" class="w-full h-full object-cover">
+    
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    
+            <!-- Text Content -->
+            <div class="absolute inset-0 flex flex-col justify-center items-start px-10 text-white max-w-3xl">
+                <p class="uppercase text-sm tracking-wide font-semibold">Case Study</p>
+                <h2 class="text-4xl font-bold leading-tight mt-2">
+                    Case Study: HUAWEI. Icon Design for EMUI 10
+                </h2>
+                <p class="mt-4 text-lg text-gray-300">
+                    The article shows the creative process of icon design for HUAWEI EMUI 10: check the stages of icon creation from sketches and concepts to a polished icon system.
+                </p>
+            </div>
+        </div>
+    </div>
+    </section>
+
+
+    <!--Explanation x-->
+<section class="mt-36">
+    <div class="w-full p-4">
+    
+       
+        <div class="relative w-full h-screen rounded-lg overflow-hidden">
+            <!-- Background Image -->
+            <img src="./yaa (5).JPG" alt="Huawei Phone" class="w-full h-full object-cover">
+    
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    
+            <!-- Text Content -->
+            <div class="absolute inset-0 flex flex-col justify-center items-start px-10 text-white max-w-3xl">
+                <p class="uppercase text-sm tracking-wide font-semibold">Case Study</p>
+                <h2 class="text-4xl font-bold leading-tight mt-2">
+                    Case Study: HUAWEI. Icon Design for EMUI 10
+                </h2>
+                <p class="mt-4 text-lg text-gray-300">
+                    The article shows the creative process of icon design for HUAWEI EMUI 10: check the stages of icon creation from sketches and concepts to a polished icon system.
+                </p>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!--Explanation x-->
+<section class="mt-36">
+    <div class="w-full p-4">
+    
+       
+        <div class="relative w-full h-screen rounded-lg overflow-hidden">
+            <!-- Background Image -->
+            <img src="./yaa (5).JPG" alt="Huawei Phone" class="w-full h-full object-cover">
+    
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    
+            <!-- Text Content -->
+            <div class="absolute inset-0 flex flex-col justify-center items-start px-10 text-white max-w-3xl">
+                <p class="uppercase text-sm tracking-wide font-semibold">Case Study</p>
+                <h2 class="text-4xl font-bold leading-tight mt-2">
+                    Case Study: HUAWEI. Icon Design for EMUI 10
+                </h2>
+                <p class="mt-4 text-lg text-gray-300">
+                    The article shows the creative process of icon design for HUAWEI EMUI 10: check the stages of icon creation from sketches and concepts to a polished icon system.
+                </p>
+            </div>
+        </div>
+    </div>
+    </section>
+
+<!--Explanation x-->
+<section class="w-full max-w-4xl mt-36 mx-auto">
+    <!-- Image Section -->
+    <div class="w-full h-full">f
+        <img src="./yaa (5).JPG" alt="Descriptive Alt Text" class="w-full h-full object-cover rounded-lg">
+    </div>
+
+    <!-- Text/Notes Section -->
+    <div class="mt-6 text-center px-6">
+        <h2 class="text-3xl font-bold text-gray-900">Title or Heading</h2>
+        <p class="mt-3 text-lg text-gray-600">
+            This is where you can add your notes, description, or details about the image above.
+            Make sure the content is clear and informative.
+        </p>
+    </div>
+</section>
+
+<section class="max-w-full min-h-screen flex items-center justify-center bg-gray-900 mt-36 p-6">
+    <div class="max-w-6xl w-full bg-gray-800 shadow-lg rounded-lg p-8 md:flex gap-8">
+        <!-- Left Side - Images -->
+        <div class="w-full md:w-1/2 grid grid-cols-1 gap-6">
+            <img src="./yaa (5).JPG" alt="Cybersecurity Image 1" class="rounded-lg shadow-md w-full">
+            <img src="./yaa (5).JPG" alt="Cybersecurity Image 2" class="rounded-lg shadow-md w-full">
+        </div>
+
+        <!-- Right Side - Text Content -->
+        <div class="w-full md:w-1/2 flex flex-col justify-center">
+            <h2 class="text-4xl font-bold mb-6">Penetration Testing</h2>
+            <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                Penetration testing simulates cyberattacks to find vulnerabilities in a system before attackers do.
+                It helps organizations identify weaknesses and improve their security posture.
+            </p>
+            <button 
+                onclick="history.back()" 
+                class="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-900 transition duration-300"
+            >
+                Back
+            </button>
+        </div>
+    </div>
+</section>
+</section>
+
+<section class="mt-28">
+    <h2 class="text-4xl font-bold text-center text-white mb-6">IT Services Explained</h2>
+</section>
+
+
+<!--Explanation Section-->
+<section class="mt-48">
+
+<!--Explanation x-->
+<section class="">
+<div class="w-full p-4">
+    <div class="relative w-full h-screen rounded-lg overflow-hidden">
+        <!-- Background Image -->
+        <img src="./yaa (5).JPG" alt="Huawei Phone" class="w-full h-full object-cover">
+
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+        <!-- Text Content -->
+        <div class="absolute inset-0 flex flex-col justify-center items-start px-10 text-white max-w-3xl">
+            <p class="uppercase text-sm tracking-wide font-semibold">Case Study</p>
+            <h2 class="text-4xl font-bold leading-tight mt-2">
+                Case Study: HUAWEI. Icon Design for EMUI 10
+            </h2>
+            <p class="mt-4 text-lg text-gray-300">
+                The article shows the creative process of icon design for HUAWEI EMUI 10: check the stages of icon creation from sketches and concepts to a polished icon system.
+            </p>
+        </div>
+    </div>
+</div>
+</section>
+<!--Explanation x-->
+<section class="p-4 mt-36">
+<div class="w-full rounded-lg bg-green-700 p-10">
+    <div class="flex flex-col md:flex-row w-full max-w-6xl mx-auto bg-green-800 text-white rounded-lg overflow-hidden">
+        <!-- Image Section -->
+        <div class="md:w-1/2 w-full">
+            <img src="./yaa (5).JPG" alt="Your Image" class="w-full h-full object-cover">
+        </div>
+
+        <!-- Text Content Section -->
+        <div class="md:w-1/2 w-full p-8 flex flex-col justify-center">
+            <h2 class="text-3xl font-bold mb-4">Built for the Thinkers</h2>
+            <p class="text-gray-300 text-lg">
+                Crafting leather takes time. It's not something most people ponder. I certainly didn't, a decade ago, when I first set foot in Mexico...
+            </p>
+        </div>
+    </div>
+</div>
+</section>
+
+<!--Explanation x-->
+<section class=" mt-36">
+    <div class="w-full p-4">
+    
+        <div class="relative w-full h-screen rounded-lg overflow-hidden">
+            <!-- Background Image -->
+            <img src="./yaa (5).JPG" alt="Huawei Phone" class="w-full h-full object-cover">
+    
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    
+            <!-- Text Content -->
+            <div class="absolute inset-0 flex flex-col justify-center items-start px-10 text-white max-w-3xl">
+                <p class="uppercase text-sm tracking-wide font-semibold">Case Study</p>
+                <h2 class="text-4xl font-bold leading-tight mt-2">
+                    Case Study: HUAWEI. Icon Design for EMUI 10
+                </h2>
+                <p class="mt-4 text-lg text-gray-300">
+                    The article shows the creative process of icon design for HUAWEI EMUI 10: check the stages of icon creation from sketches and concepts to a polished icon system.
+                </p>
+            </div>
+        </div>
+    </div>
+    </section>
+
+<!--Explanation x-->
+<section class="p-4 mt-36">
+    <div class="w-full bg-blue-700 py-10 rounded-lg">
+        <div class="flex flex-col md:flex-row w-full max-w-6xl mx-auto bg-blue-800 text-white rounded-lg overflow-hidden">
+            <!-- Image Section -->
+            <div class="md:w-1/2 w-full">
+                <img src="./yaa (5).JPG" alt="About Milk Bar" class="w-full h-full object-cover">
+            </div>
+
+            <!-- Text Content Section (Added Left Margin) -->
+            <div class="md:w-1/2 w-full p-8 md:pl-10 flex flex-col justify-center">
+                <h2 class="text-3xl font-bold mb-4">About Milk Bar</h2>
+                <p class="text-gray-300 text-lg">
+                    Milk Bar is a sweet (and occasionally savory) shop that has been turning familiar treats upside down...
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Explanation x-->
+<section class="mt-36">
+    <div class="w-full p-4">
+    
+       
+        <div class="relative w-full h-screen rounded-lg overflow-hidden">
+            <!-- Background Image -->
+            <img src="./yaa (5).JPG" alt="Huawei Phone" class="w-full h-full object-cover">
+    
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    
+            <!-- Text Content -->
+            <div class="absolute inset-0 flex flex-col justify-center items-start px-10 text-white max-w-3xl">
+                <p class="uppercase text-sm tracking-wide font-semibold">Case Study</p>
+                <h2 class="text-4xl font-bold leading-tight mt-2">
+                    Case Study: HUAWEI. Icon Design for EMUI 10
+                </h2>
+                <p class="mt-4 text-lg text-gray-300">
+                    The article shows the creative process of icon design for HUAWEI EMUI 10: check the stages of icon creation from sketches and concepts to a polished icon system.
+                </p>
+            </div>
+        </div>
+    </div>
+    </section>
+
+<!--Explanation x-->
+    <section class="w-full max-w-4xl mt-12 mx-auto">
+        <!-- Image Section -->
+        <div class="w-full h-full">f
+            <img src="./yaa (5).JPG" alt="Descriptive Alt Text" class="w-full h-full object-cover rounded-lg">
+        </div>
+    
+        <!-- Text/Notes Section -->
+        <div class="mt-6 text-center px-6">
+            <h2 class="text-3xl font-bold text-gray-900">Title or Heading</h2>
+            <p class="mt-3 text-lg text-gray-600">
+                This is where you can add your notes, description, or details about the image above.
+                Make sure the content is clear and informative.
+            </p>
+        </div>
+    </section>
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const videoContainer = document.querySelector(".roll-in");
+    
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        videoContainer.classList.add("active"); // Apply animation
+                    } else {
+                        videoContainer.classList.remove("active"); // Reset animation
+                    }
+                });
             },
-            breakpoints: {
-                640: {
-                    slidesPerView: 1, // Show 1 slide on mobile
-                    spaceBetween: 10,
-                },
-                768: {
-                    slidesPerView: 2, // Show 2 slides on tablets
-                    spaceBetween: 20,
-                },
-                1024: {
-                    slidesPerView: 3, // Show 3 slides on desktops
-                    spaceBetween: 30,
-                },
-            },
-        });
+            { threshold: 0.3 } // Trigger when 30% of the video is visible
+        );
+    
+        observer.observe(videoContainer);
+    });
+    
     </script>
-</body>
-</html>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            320: { slidesPerView: 1, spaceBetween: 10 }, // Mobile phones
+            640: { slidesPerView: 2, spaceBetween: 20 }, // Tablets
+            1024: { slidesPerView: 3, spaceBetween: 30 } // Desktops
+        }
+    });
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const slideElements = document.querySelectorAll(".slide-in, .slide-out");
+  
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("slide-in");
+                        entry.target.classList.remove("slide-out");
+                    } else {
+                        entry.target.classList.remove("slide-in");
+                        entry.target.classList.add("slide-out");
+                    }
+                });
+            },
+            { threshold: 0.1 } // Trigger animation when 10% of the element is visible
+        );
+  
+        slideElements.forEach((el) => observer.observe(el));
+    });
+  </script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const slideInElements = document.querySelectorAll('.slide-in-left, .slide-in-right');
+    
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('slide-in-active');
+          } else {
+            entry.target.classList.remove('slide-in-active'); // Remove when scrolling out
+          }
+        });
+      }, { threshold: 0.2 });
+    
+      slideInElements.forEach(el => observer.observe(el));
+    });
+    
+    </script>
+
+
+
+    <!--something-->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const slideInElements = document.querySelectorAll('.slowerslide-in-left, .slowerslide-in-right');
+        
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('slowerslide-in-active');
+              } else {
+                entry.target.classList.remove('slowerslide-in-active'); // Remove when scrolling out
+              }
+            });
+          }, { threshold: 0.2 });
+        
+          slideInElements.forEach(el => observer.observe(el));
+        });
+        
+        </script>
+
+    <!--something-->
+
+
+  
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const slideInElements = document.querySelectorAll('.slide-in-bottom');
+  
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('slide-in-active');
+        } else {
+          entry.target.classList.remove('slide-in-active'); // Remove on scroll out
+        }
+      });
+    }, { threshold: 0.2 });
+  
+    slideInElements.forEach(el => observer.observe(el));
+  });
+  </script>
 
 </body>
 </html>
