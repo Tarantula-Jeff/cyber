@@ -10,6 +10,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
 
+
+
+
     <style>
 /* Roll-in Animation */
 /* Initial hidden state */
@@ -37,13 +40,21 @@
         object-fit: cover;
     }
 }
+
 @media (max-width: 768px) {
+    .relative.w-full.md\:w-1\/2 {
+        display: flex !important;  /* Ensure the div is visible */
+        min-height: 250px !important;
+    }
+
     video {
-        position: relative;
-        display: block;
+        display: block !important;
         min-height: 200px;
+        width: 100%;
     }
 }
+
+
 
     </style>
 
@@ -366,7 +377,7 @@
         </div>
 
        <!-- Right Video -->
-       <div class="relative w-full md:w-1/2 roll-in order-1 md:order-2">
+       <div class="relative w-full md:w-1/2 roll-in" style="display: flex !important; min-height: 250px !important;">
         <video class="w-full h-full object-cover rounded-lg" autoplay loop muted>
             <source src="./cyb3.0.mp4" type="video/mp4">
             Your browser does not support the video tag.
