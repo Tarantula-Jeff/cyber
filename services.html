@@ -13,17 +13,31 @@
     <style>
 /* Roll-in Animation */
 /* Initial hidden state */
+/* Ensure Video Doesn't Overflow */
 .roll-in {
     opacity: 0;
-    transform: translateX(100%) rotate(360deg);
+    transform: translateY(100px) rotate(360deg);
     transition: transform 2s ease-out, opacity 2s ease-out;
 }
 
-/* When in view, apply animation */
-.roll-in.active {
+.roll-in.show {
     opacity: 1;
-    transform: translateX(0) rotate(0);
+    transform: translateY(0) rotate(0deg);
 }
+
+/* Mobile Fix */
+@media (max-width: 768px) {
+    .roll-in {
+        transform: translateY(50px); /* Less movement */
+    }
+
+    .video-container video {
+        max-height: 300px; /* Prevents overflow */
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
     </style>
 
 
@@ -311,7 +325,7 @@
 </section>
 
 <section class="w-full h-screen flex items-center justify-center p-6 bg-white">
-    <div class="max-w-6xl w-full h-full bg-white shadow-lg rounded-lg p-8 flex flex-col md:flex-row gap-8">
+    <div class="max-w-6xl w-full h-full bg-white shadow-lg rounded-lg p-8 flex flex-col md:flex-row gap-8 overflow-hidden relative">
         
         <!-- Left Side: Text & List -->
         <div class="w-full md:w-1/2 flex flex-col justify-center">
@@ -345,7 +359,7 @@
         </div>
 
        <!-- Right Video -->
-       <div class="relative w-full md:w-1/2 roll-in">
+       <div class="relative w-full md:w-1/2 roll-in order-1 md:order-2">
         <video class="w-full h-full object-cover rounded-lg" autoplay loop muted>
             <source src="./cybervid.mp4" type="video/mp4">
             Your browser does not support the video tag.
@@ -899,25 +913,25 @@
 </section>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const videoContainer = document.querySelector(".roll-in");
-    
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        videoContainer.classList.add("active"); // Apply animation
-                    } else {
-                        videoContainer.classList.remove("active"); // Reset animation
-                    }
-                });
-            },
-            { threshold: 0.3 } // Trigger when 30% of the video is visible
-        );
-    
-        observer.observe(videoContainer);
-    });
-    
+document.addEventListener("DOMContentLoaded", function () {
+    const videoContainer = document.querySelector(".roll-in");
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    videoContainer.classList.add("show");
+                } else {
+                    videoContainer.classList.remove("show");
+                }
+            });
+        },
+        { threshold: 0.3 } // Triggers when 30% of video is visible
+    );
+
+    observer.observe(videoContainer);
+});
+
     </script>
 
 <!-- Swiper JS -->
