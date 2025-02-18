@@ -26,9 +26,39 @@
     transform: translateX(0);
   }
   </style>
-  
 
- 
+<style>
+  /* Slide In */
+  .slide-in {
+      animation: slideIn 1.5s ease-out forwards; 
+  }
+  @keyframes slideIn {
+      from {
+          transform: translateY(-50px);
+          opacity: 0;
+      }
+      to {
+          transform: translateY(0);
+          opacity: 1;
+      }
+  }
+
+  /* Slide Out */
+  .slide-out {
+      animation: slideOut 1.5s ease-in forwards;
+  }
+  @keyframes slideOut {
+      from {
+          transform: translateY(0);
+          opacity: 1;
+      }
+      to {
+          transform: translateY(-50px);
+          opacity: 0;
+      }
+  }
+</style>
+  
 
 </head>
 <body class="bg-gray-900 text-gray-800">
@@ -281,6 +311,78 @@
     </div>
   </main>
 
+<!--Courses Explanation-->
+<section>
+   <!-- Section 1 -->
+   <div class="flex flex-col md:flex-row items-center gap-8 py-8">
+    <!-- Text Content -->
+    <div class="md:w-1/2 slide-in">
+      <h2 class="text-2xl font-bold text-blue-600">Bridging the Resource Gap</h2>
+      <p class="mt-4 text-gray-700 leading-relaxed">
+        We provide essential educational materials, including textbooks, stationery, and digital tools, to underprivileged schools. By ensuring access to resources, we empower students to achieve their full potential and create a foundation for lifelong learning.
+        To improve education in underprivileged schools, it's crucial to provide essential resources. This includes high-quality textbooks for all subjects, basic stationery like notebooks and pens, and access to technology like computers and the internet. These resources empower students with the knowledge and skills they need to succeed.
+      </p>
+    </div>
+    <!-- Image -->
+    <div class="md:w-1/2">
+      <img src="./Components/whatwedo/schoolpencil.jpg" alt="Educational Materials" class="rounded-lg shadow-lg slide-in-left">
+    </div>      
+  </div>
+
+  
+
+  <!-- Section 2 -->
+  <div class="flex flex-col md:flex-row-reverse items-center gap-8 py-8 bg-gray-50 rounded-lg shadow-sm px-6">
+    <!-- Text Content -->
+    <div class="md:w-1/2 slide-in">
+      <h2 class="text-2xl font-bold text-blue-600">Enhancing Teacher Capacity</h2>
+      <p class="mt-4 text-gray-700 leading-relaxed">
+        We host workshops and training sessions to equip teachers with modern teaching techniques. Our programs are designed to enhance teacher capacity and promote a supportive learning environment for students.
+        To enhance teacher capacity, we must invest in their professional growth. This involves providing regular training on effective teaching methods and curriculum updates, organizing workshops to address specific challenges, and creating mentorship programs to foster peer learning. Additionally, ensuring access to a wealth of educational resources, including technology and online platforms, is crucial. By prioritizing teacher well-being through stress management strategies and recognizing their contributions, we can empower them to excel in their roles and ultimately improve student learning outcomes.
+      </p>
+    </div>
+    <!-- Image -->
+    <div class="md:w-1/2">
+      <img src="./Components/whatwedo/teacherlaptop.jpg" alt="Teacher Training" class="rounded-lg shadow-lg slide-in-right">
+    </div>
+    
+  </div>
+
+  <!-- Section 3 -->
+  <div class="flex flex-col md:flex-row items-center gap-8 py-8">
+    <!-- Text Content -->
+    <div class="md:w-1/2 slide-in">
+      <h2 class="text-2xl font-bold text-blue-600">Promoting Digital Inclusion</h2>
+      <p class="mt-4 text-gray-700 leading-relaxed">
+        We focus on providing schools with access to digital resources and technology, ensuring students and teachers are prepared for a rapidly evolving world. Our efforts bridge the digital divide and foster equitable learning opportunities.
+        This involves making affordable internet access and devices available to all, providing digital literacy training to build essential skills, and creating online resources and services that are accessible to people with disabilities. By bridging the digital divide, we can empower individuals and communities to participate fully in the modern world, access essential information and services, and unlock new opportunities for economic growth and social development.
+      </p>
+    </div>
+    <!-- Image -->
+    <div class="md:w-1/2">
+      <img src="./Components/whatwedo/tech.jpg" alt="Digital Inclusion" class="rounded-lg shadow-lg slide-in-left">
+    </div>
+  </div>
+
+  <!-- Section 4 -->
+  <div class="flex flex-col md:flex-row-reverse items-center gap-8 py-8 bg-gray-50 rounded-lg shadow-sm px-6">
+    <!-- Text Content -->
+    <div class="md:w-1/2 slide-in">
+      <h2 class="text-2xl font-bold text-blue-600">Supporting Girls’ Education</h2>
+      <p class="mt-4 text-gray-700 leading-relaxed">
+        We work to reduce dropout rates and provide opportunities for girls in education. By addressing barriers and offering targeted support, we empower young women to pursue their dreams and contribute to their communities.
+        Investing in girls' education transforms communities and breaks cycles of poverty. By ensuring access to quality education for girls, we empower them to achieve their potential, contribute to economic growth, and drive social change. Educated girls are more likely to secure better jobs, delay marriage, and advocate for their rights. Supporting girls’ education fosters equality, reduces gender disparities, and builds a brighter, more inclusive future for everyone.
+      </p>
+    </div>
+    <!-- Image -->
+    <div class="md:w-1/2">
+      <img src="./Components/whatwedo/schoolkid1.jpg" alt="Girls Education" class="rounded-lg shadow-lg slide-in-right">
+    </div>
+  </div>
+
+</section>
+
+
   <!-- Footer -->
   <footer class="bg-gray-800 text-white py-4">
     <div class="container mx-auto text-center">
@@ -305,23 +407,64 @@
   </script>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const slideInElements = document.querySelectorAll('.slide-in-left, .slide-in-right');
-  
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('slide-in-active');
-        } else {
-          entry.target.classList.remove('slide-in-active'); // Remove when scrolling out
-        }
-      });
-    }, { threshold: 0.2 });
-  
-    slideInElements.forEach(el => observer.observe(el));
+  document.addEventListener("DOMContentLoaded", () => {
+      const slideElements = document.querySelectorAll(".slide-in, .slide-out");
+
+      const observer = new IntersectionObserver(
+          (entries) => {
+              entries.forEach((entry) => {
+                  if (entry.isIntersecting) {
+                      entry.target.classList.add("slide-in");
+                      entry.target.classList.remove("slide-out");
+                  } else {
+                      entry.target.classList.remove("slide-in");
+                      entry.target.classList.add("slide-out");
+                  }
+              });
+          },
+          { threshold: 0.1 } // Trigger animation when 10% of the element is visible
+      );
+
+      slideElements.forEach((el) => observer.observe(el));
   });
-  
-  </script>
+</script>
+
+
+<!-- JavaScript for Scroll Animation -->
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.remove('opacity-0', '-translate-x-10');
+        entry.target.classList.add('opacity-100', 'translate-x-0');
+      } else {
+        entry.target.classList.remove('opacity-100', 'translate-x-0');
+        entry.target.classList.add('opacity-0', '-translate-x-10');
+      }
+    });
+  });
+
+  observer.observe(document.querySelector('#slide-image'));
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const slideInElements = document.querySelectorAll('.slide-in-left, .slide-in-right');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('slide-in-active');
+      } else {
+        entry.target.classList.remove('slide-in-active'); // Remove when scrolling out
+      }
+    });
+  }, { threshold: 0.2 });
+
+  slideInElements.forEach(el => observer.observe(el));
+});
+
+</script>
 
 </body>
 </html>

@@ -10,6 +10,31 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
 
+
+    <style>
+        /* Smooth scrolling effect */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Button styling */
+        .btn {
+            padding: 12px 20px;
+            font-size: 18px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: darkblue;
+        }
+
+    </style>
+
     <style>
 /* Roll-in Animation */
 /* Initial hidden state */
@@ -39,6 +64,7 @@
 }
 
     </style>
+
 
 
     <style>
@@ -96,18 +122,6 @@
   }
   </style>
 <!--something-->
-
-
-
-
-
-
-
-
-
-
-
-
 
 
       
@@ -329,30 +343,30 @@
         
         <!-- Left Side: Text & List -->
         <div class="w-full md:w-1/2 flex flex-col justify-center">
-            <h2 class="text-4xl font-bold mb-6 slowerslide-in-left">About King's Rental And Guardian</h2>
+            <h2 class="text-4xl font-bold mb-6 slowerslide-in-left">About CyberShield Solutions</h2>
             <ul class="space-y-4 text-lg text-gray-700">
                 <li class="flex items-center slide-in-left">
                     <i class="fa-regular fa-circle-check"></i>
                     A fleet of premium, well-maintained vehicles
                 </li>
                 <li class="flex items-center slowerslide-in-left">
-                    <i class="fas fa-check-circle text-green-500 mr-3 "></i>
+                    <i class="fa-regular fa-circle-check"></i>
                     Luxury and reliable rides for business or personal needs
                 </li>
                 <li class="flex items-center slide-in-left">
-                    <i class="fas fa-shield-alt text-blue-500 mr-3"></i>
+                    <i class="fa-regular fa-circle-check"></i>
                     Investigatory Services
                 </li>
                 <li class="flex items-center slowerslide-in-left">
-                    <i class="fas fa-user-shield text-blue-500 mr-3"></i>
+                    <i class="fa-regular fa-circle-check"></i>
                     Trained and professional security personnel
                 </li>
                 <li class="flex items-center slide-in-left">
-                    <i class="fas fa-user-secret text-gray-600 mr-3"></i>
+                    <i class="fa-regular fa-circle-check"></i>
                     Discreet and highly skilled protection specialists
                 </li>
                 <li class="flex items-center slowerslide-in-left">
-                    <i class="fas fa-lock text-red-500 mr-3"></i>
+                    <i class="fa-regular fa-circle-check"></i>
                     24/7 security for VIPs, executives, and special events
                 </li>
             </ul>
@@ -369,42 +383,79 @@
     </div>
 </section>
 
-<div class="max-w-full max-h-full  mx-auto py-1 mt-48 bg-gray-900 px-4 ">
-    <h2 class="text-4xl font-bold text-center text-white mb-6">Our Services</h2>
+<div class="max-w-full max-h-full mx-auto py-1 mt-48 bg-gray-900 px-4 ">
+    <h2 class="text-4xl font-bold text-center text-white mb-6 slowerslide-in-left">Our Services</h2>
 
     <!-- Swiper Container -->
-    <div class="swiper mySwiper">
+    <div class="swiper mySwiper slowerslide-in-right">
         <div class="swiper-wrapper">
             <!-- Service Items -->
-            <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
-                <img src="https://via.placeholder.com/150" alt="Penetration Testing" class="mx-auto w-40 h-40 rounded-full object-cover">
+            <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center h-full">
+                <img src="./yaa (5).JPG" alt="Penetration Testing" class="mx-auto w-full h-full rounded-lg object-cover">
                 <h3 class="text-xl font-bold mt-4">Penetration Testing</h3>
                 <p class="text-gray-500">Identify vulnerabilities in your system before attackers do.</p>
+             <!-- Button Wrapper for Centering -->
+    <div id="services" class="mt-6 flex justify-center">
+        <a href="#pent" class="btn bg-blue-600 text-white text-sm px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition">
+            Learn More
+        </a>
+    </div>
             </div>
             <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
-                <img src="./yaa (5).JPG" alt="Network Security" class="mx-auto w-40 h-40 rounded-full object-cover">
-                <h3 class="text-xl font-bold mt-4">Network Security</h3>
+                <img src="./yaa (5).JPG" alt="Network Security" class="mx-auto w-full h-full rounded-lg object-cover">
+                <h3 class="text-xl font-bold mt-4">Vulnerability Assessment</h3>
                 <p class="text-gray-500">Protect your networks from unauthorized access and attacks.</p>
+
+                <!-- Button Wrapper for Centering -->
+    <div class="mt-6 flex justify-center">
+        <a href="#pent" class="btn bg-blue-600 text-white text-sm px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition">
+            Learn More
+        </a>
+    </div>
             </div>
             <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
-                <img src="https://via.placeholder.com/150" alt="Incident Response" class="mx-auto w-40 h-40 rounded-full object-cover">
-                <h3 class="text-xl font-bold mt-4">Incident Response</h3>
+                <img src="https://via.placeholder.com/150" alt="Incident Response" class="mx-auto w-full h-full rounded-lg object-cover">
+                <h3 class="text-xl font-bold mt-4">Thical Hacking</h3>
                 <p class="text-gray-500">Quickly respond to security breaches and cyber threats.</p>
+                <!-- Button Wrapper for Centering -->
+    <div class="mt-6 flex justify-center">
+        <a href="#pent" class="btn bg-blue-600 text-white text-sm px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition">
+            Learn More
+        </a>
+    </div>
             </div>
             <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
-                <img src="https://via.placeholder.com/150" alt="Data Encryption" class="mx-auto w-40 h-40 rounded-full object-cover">
-                <h3 class="text-xl font-bold mt-4">Data Encryption</h3>
+                <img src="https://via.placeholder.com/150" alt="Data Encryption" class="mx-auto w-full h-full rounded-lg object-cover">
+                <h3 class="text-xl font-bold mt-4">Digital Forensics</h3>
                 <p class="text-gray-500">Secure sensitive data with advanced encryption techniques.</p>
+               <!-- Button Wrapper for Centering -->
+    <div class="mt-6 flex justify-center">
+        <a href="#pent" class="btn bg-blue-600 text-white text-sm px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition">
+            Learn More
+        </a>
+    </div> 
             </div>
             <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
-                <img src="https://via.placeholder.com/150" alt="Security Audits" class="mx-auto w-40 h-40 rounded-full object-cover">
-                <h3 class="text-xl font-bold mt-4">Security Audits</h3>
+                <img src="https://via.placeholder.com/150" alt="Security Audits" class="mx-auto w-full h-full rounded-lg object-cover">
+                <h3 class="text-xl font-bold mt-4">Incidence Response</h3>
                 <p class="text-gray-500">Assess and improve your organization's security posture.</p>
+                <!-- Button Wrapper for Centering -->
+    <div class="mt-6 flex justify-center">
+        <a href="#pent" class="btn bg-blue-600 text-white text-sm px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition">
+            Learn More
+        </a>
+    </div>
             </div>
             <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
-                <img src="https://via.placeholder.com/150" alt="Cloud Security" class="mx-auto w-40 h-40 rounded-full object-cover">
-                <h3 class="text-xl font-bold mt-4">Cloud Security</h3>
+                <img src="https://via.placeholder.com/150" alt="Cloud Security" class="mx-auto w-full h-full rounded-lg object-cover">
+                <h3 class="text-xl font-bold mt-4">Network Security</h3>
                 <p class="text-gray-500">Protect cloud environments from cyber threats and breaches.</p>
+                <!-- Button Wrapper for Centering -->
+    <div class="mt-6 flex justify-center">
+        <a href="#pent" class="btn bg-blue-600 text-white text-sm px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition">
+            Learn More
+        </a>
+    </div>
             </div>
         </div>
 
@@ -416,41 +467,72 @@
     </div>
 </div>
 
-<div class="max-w-7xl mx-auto max-w-full max-h-full py-10 bg-gray-900 px-4">
+<div class="max-w-7xl mx-auto max-w-full max-h-full py-10 bg-gray-900 px-4 slowerslide-in-left">
 
     <!-- Swiper Container -->
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
             <!-- Service Items -->
             <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
-                <img src="https://via.placeholder.com/15" alt="Penetration Testing" class="mx-auto w-40 h-40 rounded-full object-cover">
-                <h3 class="text-xl font-bold mt-4">Penetration Testing</h3>
+                <img src="https://via.placeholder.com/15" alt="Penetration Testing" class="mx-auto w-full h-full rounded-lg object-cover">
+                <h3 class="text-xl font-bold mt-4">Information Security</h3>
                 <p class="text-gray-500">Identify vulnerabilities in your system before attackers do.</p>
+                       <!-- Button Wrapper for Centering -->
+    <div id="" class="mt-6 flex justify-center">
+        <a href="#pent" class="btn bg-blue-600 text-white text-sm px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition">
+            Learn More
+        </a>
+    </div>
             </div>
             <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
-                <img src="./yaa (5).JPG" alt="Network Security" class="mx-auto w-40 h-40 rounded-full object-cover">
-                <h3 class="text-xl font-bold mt-4">Network Security</h3>
+                <img src="./yaa (5).JPG" alt="Network Security" class="mx-auto w-full h-full rounded-lg object-cover">
+                <h3 class="text-xl font-bold mt-4">Industrial Control system(ICS)& IOT</h3>
                 <p class="text-gray-500">Protect your networks from unauthorized access and attacks.</p>
+                <div id="" class="mt-6 flex justify-center">
+                    <a href="#pent" class="btn bg-blue-600 text-white text-sm px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition">
+                        Learn More
+                    </a>
+                </div>
             </div>
             <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
-                <img src="https://via.placeholder.com/150" alt="Incident Response" class="mx-auto w-40 h-40 rounded-full object-cover">
-                <h3 class="text-xl font-bold mt-4">Incident Response</h3>
+                <img src="https://via.placeholder.com/150" alt="Incident Response" class="mx-auto w-full h-full rounded-lg object-cover">
+                <h3 class="text-xl font-bold mt-4">Blue Teaming (Defensive Security)</h3>
                 <p class="text-gray-500">Quickly respond to security breaches and cyber threats.</p>
+                <div id="" class="mt-6 flex justify-center">
+                    <a href="#pent" class="btn bg-blue-600 text-white text-sm px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition">
+                        Learn More
+                    </a>
+                </div>
             </div>
             <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
-                <img src="https://via.placeholder.com/150" alt="Data Encryption" class="mx-auto w-40 h-40 rounded-full object-cover">
-                <h3 class="text-xl font-bold mt-4">Data Encryption</h3>
+                <img src="https://via.placeholder.com/150" alt="Data Encryption" class="mx-auto w-full h-full rounded-lg object-cover">
+                <h3 class="text-xl font-bold mt-4">Red Teaming (Offensive Security)</h3>
                 <p class="text-gray-500">Secure sensitive data with advanced encryption techniques.</p>
+                <div id="" class="mt-6 flex justify-center">
+                    <a href="#pent" class="btn bg-blue-600 text-white text-sm px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition">
+                        Learn More
+                    </a>
+                </div>
             </div>
             <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
-                <img src="https://via.placeholder.com/150" alt="Security Audits" class="mx-auto w-40 h-40 rounded-full object-cover">
-                <h3 class="text-xl font-bold mt-4">Security Audits</h3>
+                <img src="https://via.placeholder.com/150" alt="Security Audits" class="mx-auto w-full h-full rounded-lg object-cover">
+                <h3 class="text-xl font-bold mt-4">Threat Hunting/Intelligence</h3>
                 <p class="text-gray-500">Assess and improve your organization's security posture.</p>
+                <div id="" class="mt-6 flex justify-center">
+                    <a href="#pent" class="btn bg-blue-600 text-white text-sm px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition">
+                        Learn More
+                    </a>
+                </div>
             </div>
             <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
-                <img src="https://via.placeholder.com/150" alt="Cloud Security" class="mx-auto w-40 h-40 rounded-full object-cover">
+                <img src="https://via.placeholder.com/150" alt="Cloud Security" class="mx-auto w-full h-full rounded-lg object-cover">
                 <h3 class="text-xl font-bold mt-4">Cloud Security</h3>
                 <p class="text-gray-500">Protect cloud environments from cyber threats and breaches.</p>
+                <div id="" class="mt-6 flex justify-center">
+                    <a href="#pent" class="btn bg-blue-600 text-white text-sm px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition">
+                        Learn More
+                    </a>
+                </div>
             </div>
         </div>
 
@@ -464,41 +546,72 @@
 
 
 <div class="max-w-5xl mx-auto py-10 bg-gray-900 max-w-full max-h-full px-4">
-    <h2 class="text-4xl font-bold text-center text-white mb-6">IT<span>Services</span></h2>
+    <h2 class="text-4xl font-bold text-center text-white mb-6 slowerslide-in-left">IT<span>Services</span></h2>
 
     <!-- Swiper Container -->
-    <div class="swiper mySwiper">
+    <div class="swiper mySwiper slide-in-right">
         <div class="swiper-wrapper">
             <!-- Service Items -->
             <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
-                <img src="https://via.placeholder.com/150" alt="Penetration Testing" class="mx-auto w-40 h-40 rounded-full object-cover">
-                <h3 class="text-xl font-bold mt-4">Penetration Testing</h3>
+                <img src="https://via.placeholder.com/150" alt="Penetration Testing" class="mx-auto w-full h-full rounded-lg object-cover">
+                <h3 class="text-xl font-bold mt-4">Enterprise IP Networking</h3> 
                 <p class="text-gray-500">Identify vulnerabilities in your system before attackers do.</p>
+                <div id="" class="mt-6 flex justify-center">
+                    <a href="#pent" class="btn bg-blue-600 text-white text-sm px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition">
+                        Learn More
+                    </a>
+                </div>
+               
             </div>
             <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
-                <img src="./yaa (5).JPG" alt="Network Security" class="mx-auto w-40 h-40 rounded-full object-cover">
-                <h3 class="text-xl font-bold mt-4">Network Security</h3>
+                <img src="./yaa (5).JPG" alt="Network Security" class="mx-auto w-full h-full rounded-lg object-cover">
+                <h3 class="text-xl font-bold mt-4">Data Center infrastructure</h3>
                 <p class="text-gray-500">Protect your networks from unauthorized access and attacks.</p>
+                <div id="" class="mt-6 flex justify-center">
+                    <a href="#pent" class="btn bg-blue-600 text-white text-sm px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition">
+                        Learn More
+                    </a>
+                </div>
             </div>
             <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
-                <img src="https://via.placeholder.com/150" alt="Incident Response" class="mx-auto w-40 h-40 rounded-full object-cover">
-                <h3 class="text-xl font-bold mt-4">Incident Response</h3>
+                <img src="https://via.placeholder.com/150" alt="Incident Response" class="mx-auto w-full h-full rounded-lg object-cover">
+                <h3 class="text-xl font-bold mt-4">Structured Cabling management system</h3>
                 <p class="text-gray-500">Quickly respond to security breaches and cyber threats.</p>
+                <div id="" class="mt-6 flex justify-center">
+                    <a href="#pent" class="btn bg-blue-600 text-white text-sm px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition">
+                        Learn More
+                    </a>
+                </div>
             </div>
             <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
-                <img src="https://via.placeholder.com/150" alt="Data Encryption" class="mx-auto w-40 h-40 rounded-full object-cover">
-                <h3 class="text-xl font-bold mt-4">Data Encryption</h3>
+                <img src="https://via.placeholder.com/150" alt="Data Encryption" class="mx-auto w-full h-full rounded-lg object-cover">
+                <h3 class="text-xl font-bold mt-4">VSAT and Satellite Services</h3>
                 <p class="text-gray-500">Secure sensitive data with advanced encryption techniques.</p>
+                <div id="" class="mt-6 flex justify-center">
+                    <a href="#pent" class="btn bg-blue-600 text-white text-sm px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition">
+                        Learn More
+                    </a>
+                </div>
             </div>
             <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
-                <img src="https://via.placeholder.com/150" alt="Security Audits" class="mx-auto w-40 h-40 rounded-full object-cover">
-                <h3 class="text-xl font-bold mt-4">Security Audits</h3>
+                <img src="https://via.placeholder.com/150" alt="Security Audits" class="mx-auto w-full h-full rounded-lg object-cover">
+                <h3 class="text-xl font-bold mt-4">Internet Connectivity (Cable/satellite/fiber)</h3>
                 <p class="text-gray-500">Assess and improve your organization's security posture.</p>
+                <div id="" class="mt-6 flex justify-center">
+                    <a href="#pent" class="btn bg-blue-600 text-white text-sm px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition">
+                        Learn More
+                    </a>
+                </div>
             </div>
             <div class="swiper-slide bg-white p-6 rounded-lg shadow-md text-center">
-                <img src="https://via.placeholder.com/150" alt="Cloud Security" class="mx-auto w-40 h-40 rounded-full object-cover">
-                <h3 class="text-xl font-bold mt-4">Cloud Security</h3>
+                <img src="https://via.placeholder.com/150" alt="Cloud Security" class="mx-auto w-full h-full rounded-lg object-cover">
+                <h3 class="text-xl font-bold mt-4"> Web/application development </h3>
                 <p class="text-gray-500">Protect cloud environments from cyber threats and breaches.</p>
+                <div id="" class="mt-6 flex justify-center">
+                    <a href="#pent" class="btn bg-blue-600 text-white text-sm px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition">
+                        Learn More
+                    </a>
+                </div>
             </div>
         </div>
 
@@ -511,7 +624,7 @@
 </div>
 
 <section class="mt-28">
-    <h2 class="text-4xl font-bold text-center text-white mb-6">Cybersecurity Services Explained</h2>
+    <h2 class="text-4xl font-bold text-center text-white mb-6 slide-in">Cybersecurity Services Explained</h2>
 </section>
 
 
@@ -520,7 +633,7 @@
 
 <!--Explanation x-->
 <section class="">
-<div class="w-full p-4">
+<div class="w-full p-4 slowerslide-in-left">
     <div class="relative w-full h-screen rounded-lg overflow-hidden">
         <!-- Background Image -->
         <img src="./yaa (5).JPG" alt="Huawei Phone" class="w-full h-full object-cover">
@@ -530,11 +643,11 @@
 
         <!-- Text Content -->
         <div class="absolute inset-0 flex flex-col justify-center items-start px-10 text-white max-w-3xl">
-            <p class="uppercase text-sm tracking-wide font-semibold">Case Study</p>
-            <h2 class="text-4xl font-bold leading-tight mt-2">
+            <p class="uppercase text-sm tracking-wide font-semibold slide-in-right">Case Study</p>
+            <h2 class="text-4xl font-bold leading-tight mt-2 slide-in-left">
                 Case Study: HUAWEI. Icon Design for EMUI 10
             </h2>
-            <p class="mt-4 text-lg text-gray-300">
+            <p class="mt-4 text-lg text-gray-300 slide-in-left">
                 The article shows the creative process of icon design for HUAWEI EMUI 10: check the stages of icon creation from sketches and concepts to a polished icon system.
             </p>
         </div>
@@ -546,14 +659,14 @@
 <div class="w-full rounded-lg bg-green-700 p-10">
     <div class="flex flex-col md:flex-row w-full max-w-6xl mx-auto bg-green-800 text-white rounded-lg overflow-hidden">
         <!-- Image Section -->
-        <div class="md:w-1/2 w-full">
+        <div class="md:w-1/2 w-full slide-in">
             <img src="./yaa (5).JPG" alt="Your Image" class="w-full h-full object-cover">
         </div>
 
         <!-- Text Content Section -->
         <div class="md:w-1/2 w-full p-8 flex flex-col justify-center">
-            <h2 class="text-3xl font-bold mb-4">Built for the Thinkers</h2>
-            <p class="text-gray-300 text-lg">
+            <h2 class="text-3xl font-bold mb-4 slide-in-right">Built for the Thinkers</h2>
+            <p class="text-gray-300 text-lg slowerslide-in-right">
                 Crafting leather takes time. It's not something most people ponder. I certainly didn't, a decade ago, when I first set foot in Mexico...
             </p>
         </div>
@@ -562,9 +675,8 @@
 </section>
 
 <!--Explanation x-->
-<section class=" mt-36">
-    <div class="w-full p-4">
-    
+<section class=" mt-36" id="pent">
+    <div class="w-full p-4 slowerslide-in-left">
         <div class="relative w-full h-screen rounded-lg overflow-hidden">
             <!-- Background Image -->
             <img src="./yaa (5).JPG" alt="Huawei Phone" class="w-full h-full object-cover">
@@ -574,11 +686,11 @@
     
             <!-- Text Content -->
             <div class="absolute inset-0 flex flex-col justify-center items-start px-10 text-white max-w-3xl">
-                <p class="uppercase text-sm tracking-wide font-semibold">Case Study</p>
-                <h2 class="text-4xl font-bold leading-tight mt-2">
+                <p class="uppercase text-sm tracking-wide font-semibold slide-in-right">Case Study</p>
+                <h2 class="text-4xl font-bold leading-tight mt-2 slide-in-left">
                     Case Study: HUAWEI. Icon Design for EMUI 10
                 </h2>
-                <p class="mt-4 text-lg text-gray-300">
+                <p class="mt-4 text-lg text-gray-300 slide-in-left">
                     The article shows the creative process of icon design for HUAWEI EMUI 10: check the stages of icon creation from sketches and concepts to a polished icon system.
                 </p>
             </div>
@@ -591,14 +703,14 @@
     <div class="w-full bg-blue-700 py-10 rounded-lg">
         <div class="flex flex-col md:flex-row w-full max-w-6xl mx-auto bg-blue-800 text-white rounded-lg overflow-hidden">
             <!-- Image Section -->
-            <div class="md:w-1/2 w-full">
+            <div class="md:w-1/2 w-full slowerslide-in-right">
                 <img src="./yaa (5).JPG" alt="About Milk Bar" class="w-full h-full object-cover">
             </div>
 
             <!-- Text Content Section (Added Left Margin) -->
             <div class="md:w-1/2 w-full p-8 md:pl-10 flex flex-col justify-center">
-                <h2 class="text-3xl font-bold mb-4">About Milk Bar</h2>
-                <p class="text-gray-300 text-lg">
+                <h2 class="text-3xl font-bold mb-4 slide-in">About Milk Bar</h2>
+                <p class="text-gray-300 text-lg slowerslide-in-right">
                     Milk Bar is a sweet (and occasionally savory) shop that has been turning familiar treats upside down...
                 </p>
             </div>
@@ -608,7 +720,7 @@
 
 <!--Explanation x-->
 <section class="mt-36">
-    <div class="w-full p-4">
+    <div class="w-full p-4 slowerslide-in-right">
     
        
         <div class="relative w-full h-screen rounded-lg overflow-hidden">
@@ -620,11 +732,11 @@
     
             <!-- Text Content -->
             <div class="absolute inset-0 flex flex-col justify-center items-start px-10 text-white max-w-3xl">
-                <p class="uppercase text-sm tracking-wide font-semibold">Case Study</p>
-                <h2 class="text-4xl font-bold leading-tight mt-2">
+                <p class="uppercase text-sm tracking-wide font-semibold slide-in-left">Case Study</p>
+                <h2 class="text-4xl font-bold leading-tight mt-2 slowerslide-in-right">
                     Case Study: HUAWEI. Icon Design for EMUI 10
                 </h2>
-                <p class="mt-4 text-lg text-gray-300">
+                <p class="mt-4 text-lg text-gray-300 slowerslide-in-right">
                     The article shows the creative process of icon design for HUAWEI EMUI 10: check the stages of icon creation from sketches and concepts to a polished icon system.
                 </p>
             </div>
@@ -635,12 +747,12 @@
 <!--Explanation x-->
     <section class="w-full max-w-4xl mt-12 mx-auto">
         <!-- Image Section -->
-        <div class="w-full h-full">f
+        <div class="w-full h-full slide-in">
             <img src="./yaa (5).JPG" alt="Descriptive Alt Text" class="w-full h-full object-cover rounded-lg">
         </div>
     
         <!-- Text/Notes Section -->
-        <div class="mt-6 text-center px-6">
+        <div class="mt-6 text-center px-6 slide-in-bottom">
             <h2 class="text-3xl font-bold text-gray-900">Title or Heading</h2>
             <p class="mt-3 text-lg text-gray-600">
                 This is where you can add your notes, description, or details about the image above.
@@ -652,9 +764,7 @@
 
     <!--Explanation x-->
 <section class="mt-36">
-    <div class="w-full p-4">
-    
-       
+    <div class="w-full p-4 slowerslide-in-left">
         <div class="relative w-full h-screen rounded-lg overflow-hidden">
             <!-- Background Image -->
             <img src="./yaa (5).JPG" alt="Huawei Phone" class="w-full h-full object-cover">
@@ -664,11 +774,11 @@
     
             <!-- Text Content -->
             <div class="absolute inset-0 flex flex-col justify-center items-start px-10 text-white max-w-3xl">
-                <p class="uppercase text-sm tracking-wide font-semibold">Case Study</p>
-                <h2 class="text-4xl font-bold leading-tight mt-2">
+                <p class="uppercase text-sm tracking-wide font-semibold slide-in-right">Case Study</p>
+                <h2 class="text-4xl font-bold leading-tight mt-2 slide-in-left">
                     Case Study: HUAWEI. Icon Design for EMUI 10
                 </h2>
-                <p class="mt-4 text-lg text-gray-300">
+                <p class="mt-4 text-lg text-gray-300 slide-in-left">
                     The article shows the creative process of icon design for HUAWEI EMUI 10: check the stages of icon creation from sketches and concepts to a polished icon system.
                 </p>
             </div>
@@ -679,9 +789,7 @@
 
     <!--Explanation x-->
 <section class="mt-36">
-    <div class="w-full p-4">
-    
-       
+    <div class="w-full p-4 slowerslide-in-left">
         <div class="relative w-full h-screen rounded-lg overflow-hidden">
             <!-- Background Image -->
             <img src="./yaa (5).JPG" alt="Huawei Phone" class="w-full h-full object-cover">
@@ -691,11 +799,11 @@
     
             <!-- Text Content -->
             <div class="absolute inset-0 flex flex-col justify-center items-start px-10 text-white max-w-3xl">
-                <p class="uppercase text-sm tracking-wide font-semibold">Case Study</p>
-                <h2 class="text-4xl font-bold leading-tight mt-2">
+                <p class="uppercase text-sm tracking-wide font-semibold slide-in-right">Case Study</p>
+                <h2 class="text-4xl font-bold leading-tight mt-2 slide-in-left">
                     Case Study: HUAWEI. Icon Design for EMUI 10
                 </h2>
-                <p class="mt-4 text-lg text-gray-300">
+                <p class="mt-4 text-lg text-gray-300 slide-in-left">
                     The article shows the creative process of icon design for HUAWEI EMUI 10: check the stages of icon creation from sketches and concepts to a polished icon system.
                 </p>
             </div>
@@ -705,9 +813,7 @@
 
     <!--Explanation x-->
 <section class="mt-36">
-    <div class="w-full p-4">
-    
-       
+    <div class="w-full p-4 slowerslide-in-right">
         <div class="relative w-full h-screen rounded-lg overflow-hidden">
             <!-- Background Image -->
             <img src="./yaa (5).JPG" alt="Huawei Phone" class="w-full h-full object-cover">
@@ -717,11 +823,11 @@
     
             <!-- Text Content -->
             <div class="absolute inset-0 flex flex-col justify-center items-start px-10 text-white max-w-3xl">
-                <p class="uppercase text-sm tracking-wide font-semibold">Case Study</p>
-                <h2 class="text-4xl font-bold leading-tight mt-2">
+                <p class="uppercase text-sm tracking-wide font-semibold slide-in-right">Case Study</p>
+                <h2 class="text-4xl font-bold leading-tight mt-2 slide-in-left">
                     Case Study: HUAWEI. Icon Design for EMUI 10
                 </h2>
-                <p class="mt-4 text-lg text-gray-300">
+                <p class="mt-4 text-lg text-gray-300 slide-in-left">
                     The article shows the creative process of icon design for HUAWEI EMUI 10: check the stages of icon creation from sketches and concepts to a polished icon system.
                 </p>
             </div>
@@ -732,12 +838,12 @@
 <!--Explanation x-->
 <section class="w-full max-w-4xl mt-36 mx-auto">
     <!-- Image Section -->
-    <div class="w-full h-full">f
+    <div class="w-full h-full slide-in">
         <img src="./yaa (5).JPG" alt="Descriptive Alt Text" class="w-full h-full object-cover rounded-lg">
     </div>
 
     <!-- Text/Notes Section -->
-    <div class="mt-6 text-center px-6">
+    <div class="mt-6 text-center px-6 slide-in-bottom">
         <h2 class="text-3xl font-bold text-gray-900">Title or Heading</h2>
         <p class="mt-3 text-lg text-gray-600">
             This is where you can add your notes, description, or details about the image above.
@@ -750,14 +856,14 @@
     <div class="max-w-6xl w-full bg-gray-800 shadow-lg rounded-lg p-8 md:flex gap-8">
         <!-- Left Side - Images -->
         <div class="w-full md:w-1/2 grid grid-cols-1 gap-6">
-            <img src="./yaa (5).JPG" alt="Cybersecurity Image 1" class="rounded-lg shadow-md w-full">
-            <img src="./yaa (5).JPG" alt="Cybersecurity Image 2" class="rounded-lg shadow-md w-full">
+            <img src="./yaa (5).JPG" alt="Cybersecurity Image 1" class="rounded-lg shadow-md w-full slide-in-left">
+            <img src="./yaa (5).JPG" alt="Cybersecurity Image 2" class="rounded-lg shadow-md w-full slide-in-right">
         </div>
 
         <!-- Right Side - Text Content -->
         <div class="w-full md:w-1/2 flex flex-col justify-center">
-            <h2 class="text-4xl font-bold mb-6">Penetration Testing</h2>
-            <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+            <h2 class="text-4xl font-bold mb-6 slide-in">Penetration Testing</h2>
+            <p class="text-lg text-gray-700 mb-6 leading-relaxed slide-in-bottom">
                 Penetration testing simulates cyberattacks to find vulnerabilities in a system before attackers do.
                 It helps organizations identify weaknesses and improve their security posture.
             </p>
@@ -773,7 +879,7 @@
 </section>
 
 <section class="mt-28">
-    <h2 class="text-4xl font-bold text-center text-white mb-6">IT Services Explained</h2>
+    <h2 class="text-4xl font-bold text-center text-white mb-6 slide-in">IT Services Explained</h2>
 </section>
 
 
@@ -782,7 +888,7 @@
 
 <!--Explanation x-->
 <section class="">
-<div class="w-full p-4">
+<div class="w-full p-4 slowerslide-in-right">
     <div class="relative w-full h-screen rounded-lg overflow-hidden">
         <!-- Background Image -->
         <img src="./yaa (5).JPG" alt="Huawei Phone" class="w-full h-full object-cover">
@@ -792,11 +898,11 @@
 
         <!-- Text Content -->
         <div class="absolute inset-0 flex flex-col justify-center items-start px-10 text-white max-w-3xl">
-            <p class="uppercase text-sm tracking-wide font-semibold">Case Study</p>
-            <h2 class="text-4xl font-bold leading-tight mt-2">
+            <p class="uppercase text-sm tracking-wide font-semibold slowerslide-in-left">Case Study</p>
+            <h2 class="text-4xl font-bold leading-tight mt-2 slide-in-right">
                 Case Study: HUAWEI. Icon Design for EMUI 10
             </h2>
-            <p class="mt-4 text-lg text-gray-300">
+            <p class="mt-4 text-lg text-gray-300 slowerslide-in-right">
                 The article shows the creative process of icon design for HUAWEI EMUI 10: check the stages of icon creation from sketches and concepts to a polished icon system.
             </p>
         </div>
@@ -808,12 +914,12 @@
 <div class="w-full rounded-lg bg-green-700 p-10">
     <div class="flex flex-col md:flex-row w-full max-w-6xl mx-auto bg-green-800 text-white rounded-lg overflow-hidden">
         <!-- Image Section -->
-        <div class="md:w-1/2 w-full">
+        <div class="md:w-1/2 w-full slide-in">
             <img src="./yaa (5).JPG" alt="Your Image" class="w-full h-full object-cover">
         </div>
 
         <!-- Text Content Section -->
-        <div class="md:w-1/2 w-full p-8 flex flex-col justify-center">
+        <div class="md:w-1/2 w-full p-8 flex flex-col justify-center slide-in-bottom">
             <h2 class="text-3xl font-bold mb-4">Built for the Thinkers</h2>
             <p class="text-gray-300 text-lg">
                 Crafting leather takes time. It's not something most people ponder. I certainly didn't, a decade ago, when I first set foot in Mexico...
@@ -825,7 +931,7 @@
 
 <!--Explanation x-->
 <section class=" mt-36">
-    <div class="w-full p-4">
+    <div class="w-full p-4 slowerslide-in-right">
     
         <div class="relative w-full h-screen rounded-lg overflow-hidden">
             <!-- Background Image -->
@@ -837,10 +943,10 @@
             <!-- Text Content -->
             <div class="absolute inset-0 flex flex-col justify-center items-start px-10 text-white max-w-3xl">
                 <p class="uppercase text-sm tracking-wide font-semibold">Case Study</p>
-                <h2 class="text-4xl font-bold leading-tight mt-2">
+                <h2 class="text-4xl font-bold leading-tight mt-2 slide-in-left">
                     Case Study: HUAWEI. Icon Design for EMUI 10
                 </h2>
-                <p class="mt-4 text-lg text-gray-300">
+                <p class="mt-4 text-lg text-gray-300 slowerslide-in-left">
                     The article shows the creative process of icon design for HUAWEI EMUI 10: check the stages of icon creation from sketches and concepts to a polished icon system.
                 </p>
             </div>
@@ -853,14 +959,14 @@
     <div class="w-full bg-blue-700 py-10 rounded-lg">
         <div class="flex flex-col md:flex-row w-full max-w-6xl mx-auto bg-blue-800 text-white rounded-lg overflow-hidden">
             <!-- Image Section -->
-            <div class="md:w-1/2 w-full">
+            <div class="md:w-1/2 w-full slide-in">
                 <img src="./yaa (5).JPG" alt="About Milk Bar" class="w-full h-full object-cover">
             </div>
 
             <!-- Text Content Section (Added Left Margin) -->
             <div class="md:w-1/2 w-full p-8 md:pl-10 flex flex-col justify-center">
-                <h2 class="text-3xl font-bold mb-4">About Milk Bar</h2>
-                <p class="text-gray-300 text-lg">
+                <h2 class="text-3xl font-bold mb-4 slowerslide-in-right">About Milk Bar</h2>
+                <p class="text-gray-300 text-lg slide-in-right">
                     Milk Bar is a sweet (and occasionally savory) shop that has been turning familiar treats upside down...
                 </p>
             </div>
@@ -870,7 +976,7 @@
 
 <!--Explanation x-->
 <section class="mt-36">
-    <div class="w-full p-4">
+    <div class="w-full p-4 slowerslide-in-left">
     
        
         <div class="relative w-full h-screen rounded-lg overflow-hidden">
@@ -882,11 +988,11 @@
     
             <!-- Text Content -->
             <div class="absolute inset-0 flex flex-col justify-center items-start px-10 text-white max-w-3xl">
-                <p class="uppercase text-sm tracking-wide font-semibold">Case Study</p>
-                <h2 class="text-4xl font-bold leading-tight mt-2">
+                <p class="uppercase text-sm tracking-wide font-semibold slide-in-left">Case Study</p>
+                <h2 class="text-4xl font-bold leading-tight mt-2 slowerslide-in-right">
                     Case Study: HUAWEI. Icon Design for EMUI 10
                 </h2>
-                <p class="mt-4 text-lg text-gray-300">
+                <p class="mt-4 text-lg text-gray-300 slowerslide-in-right">
                     The article shows the creative process of icon design for HUAWEI EMUI 10: check the stages of icon creation from sketches and concepts to a polished icon system.
                 </p>
             </div>
@@ -897,12 +1003,12 @@
 <!--Explanation x-->
     <section class="w-full max-w-4xl mt-12 mx-auto">
         <!-- Image Section -->
-        <div class="w-full h-full">f
+        <div class="w-full h-full slide-in">f
             <img src="./yaa (5).JPG" alt="Descriptive Alt Text" class="w-full h-full object-cover rounded-lg">
         </div>
     
         <!-- Text/Notes Section -->
-        <div class="mt-6 text-center px-6">
+        <div class="mt-6 text-center px-6 slide-in-bottom">
             <h2 class="text-3xl font-bold text-gray-900">Title or Heading</h2>
             <p class="mt-3 text-lg text-gray-600">
                 This is where you can add your notes, description, or details about the image above.
